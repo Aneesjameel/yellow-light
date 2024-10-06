@@ -268,7 +268,7 @@ h6{
 .bg-light-blue{
   background-color: #E3E8F3;
 }
-.ezy__nav1:first-child,body .footerDiv:last-child,body .footerDiv~.faqComp{
+.ezy__nav1:first-child,body .footer:last-child,body .footer~.faqComp{
   display:none;
 }
 .container {
