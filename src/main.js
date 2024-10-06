@@ -4,6 +4,8 @@ import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css';
 import App from './App.vue'
 import MainPage from './components/pages/MainPage.vue'
+import MainPage1 from './components/pages/MainPage1.vue'
+import MainPage2 from './components/pages/MainPage2.vue'
 import AllProducts from './components/pages/AllProducts.vue'
 import merchant from './components/pages/merchant.vue'
 import Best from './components/pages/Best.vue'
@@ -24,6 +26,14 @@ const routes = [
         {
           path: '',
           component: MainPage,
+        },
+        {
+          path: 'MainPage1',
+          component: MainPage1,
+        },
+        {
+          path: 'MainPage2',
+          component: MainPage2,
         },
         {
           path: 'AllProducts',

@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         'primary':'#3F9BA3',
+        'golden':'#AB8F4F',
+        'gold':'#5C4715',
         'purple':'#4F46E5',
         'blue': '#4250D8',
         'mehroon':'#F06060',

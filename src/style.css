@@ -121,18 +121,37 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: 'Caslon';
+  src: url('/fonts/AdobeCaslonProSemibold.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24';
+  src: url('/fonts/Cafe24.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NewYork';
+  src: url('/fonts/NewYork.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
 html {
   font-family: "Pretendard-Regular", system-ui, sans-serif;
+}
+h1,h2{
+  font-family: 'Caslon';
+  
 }
 /* navigation */
 .navigation a{
   font-family: 'Pretendard-Bold';
   font-size: 16px;
 }
-.navigation a:hover,.router-link-active{
-  color:theme('colors.yellow');
-}
+
 .navigation button{
   font-family: 'Pretendard-Bold';
   font-size: 16px;

@@ -33,7 +33,7 @@
             v-for="(slide, index) in slides"
             :key="index"
             @click="currentSlide = index"
-            :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-white' : 'bg-gray-400']"
+            :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-white-20' : 'bg-gray-400']"
             :style="{ width: (1 / slides.length) * 100 + '%' }">
           </div>
         </div>

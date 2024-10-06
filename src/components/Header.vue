@@ -1,7 +1,5 @@
-
-
 <template>
-  <div class="ezy__nav1 light   text-white  fixed top-0 w-full">
+  <div :class="['ezy__nav1', isScrolled ? 'bg-black' : 'light', 'text-white fixed top-0 w-full']">
   <nav class="navigation">
     <div class="container  mx-auto">
   <Disclosure as="nav"  v-slot="{ open }">
@@ -79,27 +77,42 @@
 </template>
 
 <script setup>
-
-   
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { ref, onMounted, onUnmounted } from 'vue';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
 const navigation = [
-{ name: '전체상품', pageLink: 'AllProducts', current: true },
+  { name: '전체상품', pageLink: 'AllProducts', current: true },
   { name: '신상', pageLink: 'merchant', current: true },
   { name: '베스트', pageLink: 'Best', current: false },
   { name: '무료컨설팅', pageLink: 'Consulting', current: false },
   { name: '고객센터', pageLink: 'customer', current: false },
-]
+];
 
+// Reactive property to track scroll state
+const isScrolled = ref(false);
 
+// Function to handle scroll event
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50; // Adjust this value as needed
+};
+
+// Add scroll event listener when the component mounts
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+// Clean up the event listener when the component unmounts
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
-<style scope>
-.navigation{
-  
+<style scoped>
+.navigation {
   background-color: rgb(0 0 0 / 12%);
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
-.ezy__nav1{
+.ezy__nav1 {
   z-index: 1;
 }
 </style>

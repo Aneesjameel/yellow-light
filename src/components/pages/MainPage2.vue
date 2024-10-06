@@ -1,12 +1,12 @@
 <template>
   <div class="font-sans bg-[#FBFAF8]">
     <Hero />
-    <Ad/>
-  
-    <NewProducts1 />
+    <CategorySlider/>
+    <Ad1/>
+    <NewProducts />
     <BestSellers />
     <BestSellers1 />
-    <LifeStyleGuide />
+    <LifeStyleGuide1 />
     <LivingBedroom />
     <OutdoorLight />
     <TablePoint />

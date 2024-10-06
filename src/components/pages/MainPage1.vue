@@ -1,15 +1,17 @@
 <template>
   <div class="font-sans bg-[#FBFAF8]">
     <Hero />
-    <Ad/>
+   
   
+    <CategorySlider/>
+    <Ad1/>
     <NewProducts1 />
     <BestSellers />
-    <BestSellers1 />
-    <LifeStyleGuide />
+    <LifeStyleGuide2 />
     <LivingBedroom />
     <OutdoorLight />
     <TablePoint />
+    <Recomended/>
     <DesignRail />
     <RealShowRoom />
     <Footer />
@@ -25,9 +27,8 @@ import NewProducts from '../landingpage/NewProducts.vue';
 import NewProducts1 from '../landingpage/NewProducts1.vue';
 import CategorySlider from '../landingpage/CategorySlider.vue';
 import BestSellers from '../landingpage/BestSellers.vue';
-import BestSellers1 from '../landingpage/BestSellers1.vue';
 import LifeStyleGuide from '../landingpage/LifeStyleGuide.vue';
-import LifeStyleGuide1 from '../landingpage/LifeStyleGuide1.vue';
+import Recomended from '../landingpage/Recomended.vue';
 import LifeStyleGuide2 from '../landingpage/LifeStyleGuide2.vue';
 import OutdoorLight from '../landingpage/OutdoorLight.vue';
 import LivingBedroom from '../landingpage/LivingBedroom.vue';
@@ -42,17 +43,16 @@ export default {
     Ad,
     Ad1,
     CategorySlider,
+    Recomended,
     NewProducts,
     NewProducts1,
     TablePoint,
-    BestSellers1,
     OutdoorLight,
     LivingBedroom,
     DesignRail,
-    BestSellers1,
+    BestSellers,
     RealShowRoom,
     LifeStyleGuide,
-    LifeStyleGuide1,
     LifeStyleGuide2,
     Footer
   }
