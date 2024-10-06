@@ -1,9 +1,9 @@
 <template>
-    <div class="grid h-screen place-items-center"> <!-- Adjusted margin to account for navbar height -->
+ <div class="grid h-screen place-items-center"> <!-- Adjusted margin to account for navbar height -->
         <div class="w-full max-w-md">
             <div class="bg-white px-8 pt-6 pb-8 mb-4">
                 <div class="brand flex items-center justify-center mb-8">
-                    <img src="/logo-large.png" alt="">
+                    <h1 class="font-semibold text-xl">아이디 찾기</h1>
                 </div>
                 <!-- Form -->
                 <form>
@@ -30,8 +30,8 @@
 
                     <div class="flex justify-between mt-10">
                         <div>
-                            <a href="findid" class="text-gray-600 hover:text-gray-900">아이디찾기 |</a>
-                            <a href="password" class="text-gray-600 hover:text-gray-900">비밀번호찾기</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900">아이디찾기 |</a>
+                            <a href="#" class="text-gray-600 hover:text-gray-900">비밀번호찾기</a>
                         </div>
                         <div>
                             <a href="#" class="text-gray-600 hover:text-gray-900">회원가입</a>
