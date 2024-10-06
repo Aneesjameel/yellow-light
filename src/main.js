@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router';
 import './style.css'
+import '@fortawesome/fontawesome-free/css/all.css';
 import App from './App.vue'
 import MainPage from './components/pages/MainPage.vue'
 import AllProducts from './components/pages/AllProducts.vue'
@@ -8,6 +9,7 @@ import merchant from './components/pages/merchant.vue'
 import Best from './components/pages/Best.vue'
 import Consulting from './components/pages/Consulting.vue'
 import customer from './components/pages/customer.vue'
+import login from './components/login.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -43,6 +45,10 @@ const routes = [
         {
           path: 'customer',
           component: customer,
+        },
+        {
+          path: 'login',
+          component: login,
         }
       ],
     },
