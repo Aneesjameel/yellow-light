@@ -12,6 +12,10 @@ import Best from './components/pages/Best.vue'
 import Consulting from './components/pages/Consulting.vue'
 import customer from './components/pages/customer.vue'
 import login from './components/login.vue'
+import signup from './components/signup.vue'
+import findid from './components/findid.vue'
+import password from './components/password.vue'
+import memberinformation from './components/memberinformation.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -59,6 +63,26 @@ const routes = [
         {
           path: 'login',
           component: login,
+        }
+        ,
+        {
+          path: 'signup',
+          component: signup,
+        }
+        ,
+        {
+          path: 'findid',
+          component: findid,
+        }
+        ,
+        {
+          path: 'password',
+          component: password,
+        }
+        ,
+        {
+          path: 'memberinformation',
+          component: memberinformation,
         }
       ],
     },

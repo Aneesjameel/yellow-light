@@ -30,8 +30,8 @@
 
                     <div class="flex justify-between mt-10">
                         <div>
-                            <a href="#" class="text-gray-600 hover:text-gray-900">아이디찾기 |</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900">비밀번호찾기</a>
+                            <a href="findid" class="text-gray-600 hover:text-gray-900">아이디찾기 |</a>
+                            <a href="password" class="text-gray-600 hover:text-gray-900">비밀번호찾기</a>
                         </div>
                         <div>
                             <a href="#" class="text-gray-600 hover:text-gray-900">회원가입</a>
