@@ -13,6 +13,7 @@ import login from './components/login.vue'
 import signup from './components/signup.vue'
 import findid from './components/findid.vue'
 import password from './components/password.vue'
+import memberinformation from './components/memberinformation.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -67,6 +68,11 @@ const routes = [
         {
           path: 'password',
           component: password,
+        }
+        ,
+        {
+          path: 'memberinformation',
+          component: memberinformation,
         }
       ],
     },
