@@ -16,6 +16,9 @@ import signup from './components/signup.vue'
 import findid from './components/findid.vue'
 import password from './components/password.vue'
 import memberinformation from './components/memberinformation.vue'
+import cart from './components/pages/cart.vue'
+import checkout from './components/pages/checkout.vue'
+import orderDetails from './components/pages/orderDetails.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -83,6 +86,18 @@ const routes = [
         {
           path: 'memberinformation',
           component: memberinformation,
+        },
+        {
+          path: 'cart',
+          component: cart,
+        },
+        {
+          path: 'checkout',
+          component: checkout,
+        },
+        {
+          path: 'orderDetails',
+          component: orderDetails,
         }
       ],
     },

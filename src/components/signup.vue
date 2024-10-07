@@ -2,7 +2,7 @@
   <div class="max-w-lg mx-auto p-6 mt-20">
     <!-- Welcome Message -->
     <div class="text-center mb-6">
-      <img src="/public/wellcome-let-join-us.svg" alt="" class="mx-auto mb-10">
+      <img src="/wellcome-let-join-us.svg" alt="" class="mx-auto mb-10">
 
       <p class="text-sm text-gray-500">노랑조명에 오신것을 환영합니다.<br>
         회원가입 후 다양한 혜택을 누리세요!</p>
