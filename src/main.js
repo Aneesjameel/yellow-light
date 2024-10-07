@@ -18,7 +18,16 @@ import password from './components/password.vue'
 import memberinformation from './components/memberinformation.vue'
 import cart from './components/pages/cart.vue'
 import checkout from './components/pages/checkout.vue'
+import orderConfirmation from './components/pages/orderConfirmation.vue'
+import orderSummary from './components/pages/orderSummary.vue'
 import orderDetails from './components/pages/orderDetails.vue'
+import myPage from './components/pages/myPage.vue'
+import myPageTwo from './components/pages/myPageTwo.vue'
+import myReviews from './components/pages/myReviews.vue'
+import reviewsManagement from './components/pages/reviewsManagement.vue'
+import account from './components/pages/account.vue'
+import wishlist from './components/pages/wishlist.vue'
+import couponDetails from './components/pages/couponDetails.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -98,6 +107,51 @@ const routes = [
         {
           path: 'orderDetails',
           component: orderDetails,
+        }
+        ,
+        {
+          path: 'orderConfirmation',
+          component: orderConfirmation,
+        }
+        ,
+        {
+          path: 'orderSummary',
+          component: orderSummary,
+        }
+        ,
+        {
+          path: 'account',
+          component: account,
+        }
+        ,
+        {
+          path: 'myPage',
+          component: myPage,
+        }
+        ,
+        {
+          path: 'myPageTwo',
+          component: myPageTwo,
+        }
+        ,
+        {
+          path: 'myReviews',
+          component: myReviews,
+        }
+        ,
+        {
+          path: 'reviewsManagement',
+          component: reviewsManagement,
+        }
+        ,
+        {
+          path: 'wishlist',
+          component: wishlist,
+        }
+        ,
+        {
+          path: 'couponDetails',
+          component: couponDetails,
         }
       ],
     },

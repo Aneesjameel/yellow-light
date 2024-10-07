@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 mt-10 mb-10">
     <div class="p-6">
       <div class="brand mb-8">
-        <h1 class="font-semibold text-xl">장바구니</h1>
+        <h1 class="font-semibold text-xl">관심상품</h1>
       </div>
       <!-- Cart Table -->
       <table class="min-w-full table-auto">
@@ -12,7 +12,8 @@
               <input type="checkbox" v-model="selectAll" @change="toggleSelectAll" class="mr-2" />
               전체선택
             </th>
-            <th class="px-6 py-2 text-center">상품정보</th>
+            <th class="px-6 py-2 text-center">상품명</th>
+            <th class="px-6 py-2 text-center">옵션</th>
             <th class="px-6 py-2 text-center">수량</th>
             <th class="px-6 py-2 text-center">상품금액</th>
             <th class="px-6 py-2 text-center">배송비</th>
@@ -24,13 +25,26 @@
             <td class="px-6 py-6">
               <input type="checkbox" v-model="item.selected" class="mr-2" />
             </td>
-            <td class="px-6 py-6">
+            <td class="px-6 py-6 max-w-80">
               <div class="flex items-center">
                 <img :src="item.image" alt="Product Image" class="w-16 h-16 mr-4" />
                 <div>
                   <p class="font-bold">{{ item.name }}</p>
-                  <p class="text-sm text-gray-500">{{ item.options }}</p>
                 </div>
+              </div>
+            </td>
+            <td class="px-6 py-6">
+              <div class="flex flex-col items-center">
+                <select name="" id="" class="mb-2 border-[#D5D5D5]">
+                  <option value="">옵션을 선택해 주세요. (필수)</option>
+                  <option value="">옵션을 선택해 주세요. (필수)</option>
+                  <option value="">옵션을 선택해 주세요. (필수)</option>
+                </select>
+                <select name="" id="" class=" border-[#D5D5D5]">
+                  <option value="">옵션을 선택해 주세요. (필수)</option>
+                  <option value="">옵션을 선택해 주세요. (필수)</option>
+                  <option value="">옵션을 선택해 주세요. (필수)</option>
+                </select>
               </div>
             </td>
             <td class="px-6 py-6">
@@ -51,12 +65,8 @@
                 구매하기
               </button>
               <button
-                class="bg-white py-2 px-6 rounded-full hover:bg-black border border-[#4E4E4E] text-black hover:text-white">
-                삭제하기
-              </button>
-              <button
-                class="bg-white py-2 px-6 rounded-full hover:bg-black border border-[#4E4E4E] text-black hover:text-white">
-                관심상품 등록
+                class="bg-[#FFF4D7] py-2 px-6 rounded-full hover:bg-black  text-black hover:text-white">
+                장바구니 담기
               </button>
             </td>
           </tr>
@@ -69,10 +79,6 @@
           <button @click="removeSelectedItems"
             class="px-4 py-2 bg-gray-100 text-[#4e4e4e] rounded-full hover:bg-black hover:text-white">
             선택 삭제
-          </button>
-          <button @click="clearCart"
-            class="px-4 py-2 bg-gray-100 text-[#4e4e4e] rounded-full hover:bg-black hover:text-white">
-            장바구니 비우기
           </button>
           <button class="px-4 py-2 bg-gray-100 text-[#4e4e4e] rounded-full hover:bg-black hover:text-white">
             견적서 출력
@@ -139,7 +145,7 @@ export default {
       cartItems: [
         {
           image: '/products/product.jpg',
-          name: '서브 1등 직부 검정 벽등',
+          name: '서브 1등 직부 검정 벽등 서브 1등 직부 검정 벽등',
           options: '베이지/LED에디슨 인지구(전구색/백색)',
           price: 55000,
           quantity: 1,
@@ -147,7 +153,7 @@ export default {
         },
         {
           image: '/products/product.jpg',
-          name: '서브 1등 직부 검정 벽등',
+          name: '서브 1등 직부 겸용 벽등 서브 1등 직부 겸용 벽등',
           options: '베이지/LED에디슨 인지구(전구색/백색)',
           price: 55000,
           quantity: 1,
@@ -155,7 +161,7 @@ export default {
         },
         {
           image: '/products/product.jpg',
-          name: '서브 1등 직부 검정 벽등',
+          name: '서브 1등 직부 겸용 벽등 서브 1등 직부 겸용 벽등',
           options: '베이지/LED에디슨 인지구(전구색/백색)',
           price: 55000,
           quantity: 1,

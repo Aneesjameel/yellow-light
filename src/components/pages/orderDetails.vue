@@ -1,14 +1,12 @@
 <template>
-    <div class="container mx-auto px-4">
-     Order Details
-    </div>
-  </template>
-  
-  <script>
-  
-  </script>
-  
-  <style scoped>
-  /* Additional styles if needed */
-  </style>
-  
+</template>
+
+<script>
+// export default {
+//   name: "OrderConfirmation",
+// };
+</script>
+
+<style scoped>
+/* You can add custom styles here if needed */
+</style>
