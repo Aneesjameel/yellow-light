@@ -28,6 +28,9 @@ import reviewsManagement from './components/pages/reviewsManagement.vue'
 import account from './components/pages/account.vue'
 import wishlist from './components/pages/wishlist.vue'
 import couponDetails from './components/pages/couponDetails.vue'
+import ProductList from './components/pages/ProductList.vue'
+import ProductDetail from './components/pages/ProductDetail.vue'
+import faq from './components/pages/faq.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -46,6 +49,10 @@ const routes = [
         {
           path: 'MainPage1',
           component: MainPage1,
+        },
+        {
+          path: 'faq',
+          component: faq,
         },
         {
           path: 'MainPage2',
@@ -152,6 +159,16 @@ const routes = [
         {
           path: 'couponDetails',
           component: couponDetails,
+        }
+        ,
+        {
+          path: 'ProductList',
+          component: ProductList,
+        }
+        ,
+        {
+          path: 'ProductDetail',
+          component: ProductDetail,
         }
       ],
     },
