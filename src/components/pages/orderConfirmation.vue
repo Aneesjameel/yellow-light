@@ -44,8 +44,8 @@
   
         <!-- Buttons Section -->
         <div class="flex justify-center gap-4 mt-6">
-          <button class="bg-[#4D4D4D] text-white hover:bg-black py-2 px-6 rounded-full">주문조회</button>
-          <button class="bg-[#D68F00] text-white hover:bg-black py-2 px-6 rounded-full">쇼핑 계속하기</button>
+          <router-link to="OrderSummary" class="flex justify-center bg-[#4D4D4D] text-white hover:bg-black py-2 px-6 rounded-full">주문조회</router-link>
+          <router-link to="MainPage1" class="flex justify-center bg-[#D68F00] text-white hover:bg-black py-2 px-6 rounded-full">쇼핑 계속하기</router-link>
         </div>
       </div>
     </div>

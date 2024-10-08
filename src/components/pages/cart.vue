@@ -47,17 +47,17 @@
             <td class="px-6 py-6 font-bold text-center justify-center">{{ (item.price) }}원</td>
             <td class="px-6 py-6 text-center justify-center">무료</td>
             <td class="px-6 py-6 text-center justify-center flex-col flex gap-2">
-              <button @click="removeItem(index)" class="text-white bg-[#D68F00] py-2 px-6 rounded-full hover:bg-black">
+              <router-link to="/checkout" class="text-white bg-[#D68F00] py-2 px-6 rounded-full hover:bg-black"><button @click="removeItem(index)" class="">
                 구매하기
-              </button>
-              <button
-                class="bg-white py-2 px-6 rounded-full hover:bg-black border border-[#4E4E4E] text-black hover:text-white">
+              </button></router-link>
+              <router-link to="/checkout" class="bg-white py-2 px-6 rounded-full hover:bg-black border border-[#4E4E4E] text-black hover:text-white"><button
+                class="">
                 삭제하기
-              </button>
-              <button
-                class="bg-white py-2 px-6 rounded-full hover:bg-black border border-[#4E4E4E] text-black hover:text-white">
+              </button></router-link>
+              <router-link to="/checkout" class="bg-white py-2 px-6 rounded-full hover:bg-black border border-[#4E4E4E] text-black hover:text-white"><button
+                class="">
                 관심상품 등록
-              </button>
+              </button></router-link>
             </td>
           </tr>
         </tbody>
@@ -120,12 +120,12 @@
         </div>
       </div>
       <div class="flex justify-end space-x-2 mt-10">
-        <button class="mt-4 px-6 py-2 bg-[#4E4E4E] text-white hover:bg-black hover:text-white rounded-full">
+        <router-link to="/checkout"><button class="mt-4 px-6 py-2 bg-[#4E4E4E] text-white hover:bg-black hover:text-white rounded-full">
           선택 상품 주문
-        </button>
-        <button class="mt-4 px-6 py-2 bg-[#D68F00] text-white hover:bg-black hover:text-white rounded-full">
+        </button></router-link>
+        <router-link to="/checkout"><button class="mt-4 px-6 py-2 bg-[#D68F00] text-white hover:bg-black hover:text-white rounded-full">
           전체 상품 주문
-        </button>
+        </button></router-link>
       </div>
     </div>
   </div>
@@ -138,7 +138,7 @@ export default {
       selectAll: false,
       cartItems: [
         {
-          image: '/products/product.jpg',
+          image: '/products/1.png',
           name: '서브 1등 직부 검정 벽등',
           options: '베이지/LED에디슨 인지구(전구색/백색)',
           price: 55000,
@@ -146,7 +146,7 @@ export default {
           selected: false
         },
         {
-          image: '/products/product.jpg',
+          image: '/products/1.png',
           name: '서브 1등 직부 검정 벽등',
           options: '베이지/LED에디슨 인지구(전구색/백색)',
           price: 55000,
@@ -154,7 +154,7 @@ export default {
           selected: false
         },
         {
-          image: '/products/product.jpg',
+          image: '/products/1.png',
           name: '서브 1등 직부 검정 벽등',
           options: '베이지/LED에디슨 인지구(전구색/백색)',
           price: 55000,

@@ -18,23 +18,30 @@
                     </div>
 
                     <!-- Login Button -->
+                
                     <div class="flex flex-col gap-2 items-center justify-center">
-                        <button class="rounded-2xl w-full bg-black hover:bg-gray-600 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        <router-link to="/MainPage2" class="w-full cursor-pointer">
+                        <button class="rounded-2xl w-full bg-black hover:bg-gray-600 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                             로그인
                         </button>
-                        <button class="relative rounded-2xl w-full bg-[#03C75A] text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                            <img src="/btnG.png" alt="" class="absolute top-[9px]">
+                    </router-link>
+                        <router-link to="/MainPage" class="w-full cursor-pointer">
+                        <button class="relative rounded-2xl w-full bg-[#03C75A] text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline" type="button">
+                            <img src="/btnG.png" alt="" class="absolute top-[9px] left-[10px]"> <!-- Adjust 'left' position if needed -->
                             네이버로 로그인
                         </button>
+                        </router-link>
+
                     </div>
 
                     <div class="flex justify-between mt-10">
-                        <div>
-                            <a href="findid" class="text-gray-600 hover:text-gray-900">아이디찾기 |</a>
+                        <div class="flex ">
+                            <a href="findid" class="text-gray-600 hover:text-gray-900">아이디찾기</a>
+                            <hr class=" mx-1 border border-gray-200 h-6"/>
                             <a href="password" class="text-gray-600 hover:text-gray-900">비밀번호찾기</a>
                         </div>
                         <div>
-                            <a href="#" class="text-gray-600 hover:text-gray-900">회원가입</a>
+                            <a href="memberinformation" class="text-gray-600 hover:text-gray-900">회원가입</a>
                         </div>
                     </div>
                 </form>

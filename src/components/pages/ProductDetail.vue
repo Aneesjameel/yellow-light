@@ -35,7 +35,7 @@
         <!-- Right Section: Product Details -->
         <div class="w-full md:w-1/2 md:pl-10">
           <div class="mt-2 flex space-x-1" v-if="labels">
-          <span v-for="(label, labelIndex) in labels" :key="labelIndex" :class="label.class">{{ label.text }}</span>
+          <span v-for="(label, labelIndex) in labels" :key="labelIndex" :class="label.class"><img src="/public/car.png" class="h-3 mr-2"/>{{ label.text }}</span>
         </div>
           <h3 class="text-2xl font-bold">{{ productName }}</h3>
          
@@ -62,7 +62,7 @@
       :class="item.isSoldOut ? 'bg-gray-400' : 'bg-gray-200'"
     >
       <!-- Image -->
-      <img :src="item.image" alt="option image" class="w-full h-20 object-cover mb-2" />
+      <img :src="item.image" alt="option image" class="w-full  object-cover mb-2" />
 
       <!-- Title and Price -->
       <p class="text-lg font-semibold mb-1">{{ item.title }}</p>
@@ -93,7 +93,7 @@
       :class="item.isSoldOut ? 'bg-gray-400' : 'bg-gray-200'"
     >
       <!-- Image -->
-      <img :src="item.image" alt="option image" class="w-full h-20 object-cover mb-2" />
+      <img :src="item.image" alt="option image" class="w-full object-cover mb-2" />
 
       <!-- Title and Price -->
       <p class="text-lg font-semibold mb-1">{{ item.title }}</p>
@@ -124,7 +124,7 @@
       :class="item.isSoldOut ? 'bg-gray-400' : 'bg-gray-200'"
     >
       <!-- Image -->
-      <img :src="item.image" alt="option image" class="w-full h-20 object-cover mb-2" />
+      <img :src="item.image" alt="option image" class="w-full object-cover mb-2" />
 
       <!-- Title and Price -->
       <p class="text-lg font-semibold mb-1">{{ item.title }}</p>
@@ -160,14 +160,20 @@
             </div>
           </div>
   
-          <!-- Add to Cart Button -->
-          <div class="mt-6">
-            <button
-              class="w-full px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
-            >
-              Add to Cart
-            </button>
-          </div>
+        
+          <div class="flex space-x-2 w-3/4 mt-10">
+                
+                <router-link  to="cart" class="px-4 py-2 bg-gray-600 text-white rounded-[50px] hover:bg-gray-600  w-full text-center items-center justify-center">
+                  장바구니
+               
+              </router-link>
+              <router-link   to="cart" class="px-4 py-2 bg-yellow-600 text-white rounded-[50px] hover:bg-yellow-600  w-full text-center items-center justify-center">
+            
+                  장바구니
+             
+              </router-link>
+              </div>
+              
         </div>
       </div>
       <DetailPageTab/>
@@ -197,7 +203,7 @@
             originalPrice: '59,800원',
             size: 'W280xD200xH70 [후렌]',
             bulbType: 'LED 일체형 (8W/4000K)',
-            labels: [{ text: '신상품', class: 'bg-yellow-500 text-white text-xs px-2 py-1 rounded' }, { text: '오늘출발', class: 'bg-gray-400 text-white text-xs px-2 py-1 rounded' }],
+            labels: [{ text: '신상품', class: 'bg-yellow-500 text-white text-xs px-2 py-1 rounded flex items-center rounded-full  ' }, { text: '오늘출발', class: 'rounded-full items-center bg-yellow-800 text-white text-xs px-2 py-1 rounded flex' }],
             category: 0,
         productImages: [
           "products/1.png", // Replace with actual image paths
@@ -219,19 +225,19 @@
         {
           title: '블랙',
           price: '10,000원',
-          image: '/path/to/image1.jpg', // Replace with actual image paths
+          image: '/products/1.png', // Replace with actual image paths
           isSoldOut: false,
         },
         {
           title: '화이트',
           price: '15,000원',
-          image: '/path/to/image2.jpg',
+          image: '/products/1.png', // Replace with actual image paths
           isSoldOut: true,
         },
         {
           title: '골드',
           price: '20,000원',
-          image: '/path/to/image3.jpg',
+          image: '/products/1.png', // Replace with actual image paths
           isSoldOut: false,
         },
       ]

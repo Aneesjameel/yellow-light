@@ -44,11 +44,15 @@ const routes = [
       children: [
         {
           path: '',
-          component: MainPage,
+          component: login,
         },
         {
           path: 'MainPage1',
           component: MainPage1,
+        },
+        {
+          path: 'MainPage',
+          component: MainPage,
         },
         {
           path: 'faq',

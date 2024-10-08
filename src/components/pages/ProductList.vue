@@ -29,7 +29,7 @@
     <!-- Product Grid -->
     <div class="mt-10 grid md:grid-cols-4 gap-6 grid-cols-1">
       <!-- Product Cards Displayed Based on Active Tab -->
-      <div 
+      <a href="ProductDetail"
         v-for="(product, index) in paginatedProducts" 
         :key="index"
         class="">
@@ -45,7 +45,7 @@
         <div class="mt-2 flex space-x-1" v-if="product.labels">
           <span v-for="(label, labelIndex) in product.labels" :key="labelIndex" :class="label.class">{{ label.text }}</span>
         </div>
-      </div>
+      </a>
     </div>
     
     <!-- Pagination Section -->

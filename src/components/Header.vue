@@ -119,7 +119,7 @@ onUnmounted(() => {
 
 
 const navigation = [
-  { name: '전체상품', pageLink: 'AllProducts', current: true },
+  { name: '전체상품', pageLink: 'ProductList', current: true },
   { name: '신상', pageLink: 'merchant', current: true },
   { name: '베스트', pageLink: 'Best', current: false },
   { name: '무료컨설팅', pageLink: 'Consulting', current: false },

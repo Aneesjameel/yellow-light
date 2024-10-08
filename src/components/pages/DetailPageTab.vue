@@ -82,12 +82,12 @@
                <h1 class="font-bold">주문금액</h1>
               <div class="flex space-x-2">
                 
-                <button class="px-4 py-2 bg-gray-600 text-white rounded-[50px] hover:bg-gray-600">
+                <router-link   to="cart" ><button class="px-4 py-2 bg-gray-600 text-white rounded-[50px] hover:bg-gray-600">
                   장바구니
-                </button>
-                <button class="px-4 py-2 bg-yellow-600 text-white rounded-[50px] hover:bg-yellow-600">
+                </button></router-link>
+                <router-link   to="cart" ><button class="px-4 py-2 bg-yellow-600 text-white rounded-[50px] hover:bg-yellow-600">
                   바로구매
-                </button>
+                </button></router-link>
                 <img
       @click="toggleHeart"
       :src="[ isHearted ?  '/public/heart1.png' :'/public/heart2.png']"/>
