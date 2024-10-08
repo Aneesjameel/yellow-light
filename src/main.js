@@ -31,6 +31,8 @@ import couponDetails from './components/pages/couponDetails.vue'
 import ProductList from './components/pages/ProductList.vue'
 import ProductDetail from './components/pages/ProductDetail.vue'
 import faq from './components/pages/faq.vue'
+import faq2 from './components/pages/faq2.vue'
+import contact from './components/pages/contact.vue'
 
 
 import PrimeVue from 'primevue/config';
@@ -59,6 +61,10 @@ const routes = [
           component: faq,
         },
         {
+          path: 'faq2',
+          component: faq2,
+        },
+        {
           path: 'MainPage2',
           component: MainPage2,
         },
@@ -77,6 +83,11 @@ const routes = [
         {
           path: 'Consulting',
           component: Consulting,
+        }
+        ,
+        {
+          path: 'contact',
+          component: contact,
         }
         ,
         {
