@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto px-4 mt-10 mb-10">
-    <div class="brand mb-8">
+    <div class="brand mb-8 text-center">
       <h1 class="font-semibold text-xl">마이페이지</h1>
     </div>
-    <div class="flex items-center justify-between py-3 px-16 bg-[#FFF2D4] mb-5">
+    <div class="flex items-center justify-between py-3 px-16 bg-[#F2F2F2] mb-5">
       <p class="p-4 font-bold">주문내역</p>
       <p class="p-4 font-bold">쿠폰내역</p>
       <p class="p-4 font-bold">장바구니</p>
@@ -11,113 +11,159 @@
       <p class="p-4 font-bold">리뷰 관리</p>
       <p class="p-4 font-bold">회원정보</p>
     </div>
-    <div class="flex bg-[#F3F3F3] py-10 px-10 items-center">
-      <div class="flex flex-auto flex-col">
-        <p class="font-bold">홍길동 <small class="font-normal">(admin1)</small></p>
-      </div>
-      <div class="flex flex-auto flex-col border-l pl-6 border-[#d5d5d5]">
-        <p>쿠폰</p>
-        <p class="font-bold">0</p>
-      </div>
-      <div class="flex flex-auto flex-col  border-l pl-6 border-[#d5d5d5]">
-        <p>적립금</p>
-        <p class="font-bold">560</p>
-      </div>
-      <div class="flex flex-auto flex-col  border-l pl-6 border-[#d5d5d5]">
-        <p>작성 가능 리뷰</p>
-        <p class="font-bold">0</p>
-      </div>
-    </div>
-    <div class="mt-10">
-      <div class="min-w-full my-10 ">
-        <!-- Order Status Header -->
-        <h2 class="text-xl font-semibold mb-4">주문 처리 현황</h2>
-
-        <!-- Order Status Steps -->
-        <div class="flex justify-between items-center border-b border-t p-4">
-          <div class="flex items-center space-x-10 pl-6">
-            <!-- Step 1 -->
-            <div class="text-center">
-              <span class="block text-lg font-bold">0</span>
-              <span class="block text-gray-500">입금 전</span>
+    <div class="mt-8">
+      <h2 class="font-semibold text-xl mb-4">
+        회원정보 수정
+      </h2>
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col">
+          <div class="flex border-t border-[#d5d5d5]">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                이름
+              </p>
             </div>
-            <span class="text-gray-300">></span>
-
-            <!-- Step 2 -->
-            <div class="text-center">
-              <span class="block text-lg font-bold">0</span>
-              <span class="block text-gray-500">배송준비중</span>
-            </div>
-            <span class="text-gray-300">></span>
-
-            <!-- Step 3 -->
-            <div class="text-center">
-              <span class="block text-lg font-bold">0</span>
-              <span class="block text-gray-500">배송중</span>
-            </div>
-            <span class="text-gray-300">></span>
-
-            <!-- Step 4 -->
-            <div class="text-center">
-              <span class="block text-lg font-bold">0</span>
-              <span class="block text-gray-500">배송완료</span>
+            <div class="p-2">
+              <p>홍길동</p>
             </div>
           </div>
-
-          <!-- Cancel, Exchange, Return -->
-          <div class="text-right space-y-1">
-            <p class="text-gray-500">취소: <span class="font-bold">0건</span></p>
-            <p class="text-gray-500">교환: <span class="font-bold">0건</span></p>
-            <p class="text-gray-500">반품: <span class="font-bold">0건</span></p>
+          <div class="flex border-t border-[#d5d5d5]">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                아이디
+              </p>
+            </div>
+            <div class="p-2">
+              <p>admin1</p>
+            </div>
+          </div>
+          <div class="flex border-t border-[#d5d5d5] items-center">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                비밀번호 변경
+              </p>
+            </div>
+            <div class="p-2">
+              <p><input type="text" name="" id="" class="border border-[#d5d5d5] p-1"> * 영문 대소문자/숫자/특수문자 중 2종류 10~16자 또는
+                3종류 8~16자</p>
+            </div>
+          </div>
+          <div class="flex border-t border-[#d5d5d5] items-center">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                비밀번호 확인
+              </p>
+            </div>
+            <div class="p-2">
+              <p><input type="text" name="" id="" class="border border-[#d5d5d5] p-1"></p>
+            </div>
+          </div>
+          <div class="flex border-t border-[#d5d5d5]">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                생년월일
+              </p>
+            </div>
+            <div class="p-2 flex gap-2">
+              <p>
+                <select name="" id="" class="min-w-[90px] border border-[#d5d5d5] p-1">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+                년
+              </p>
+              <p>
+                <select name="" id="" class="min-w-[90px] border border-[#d5d5d5] p-1">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+                월
+              </p>
+              <p>
+                <select name="" id="" class="min-w-[90px] border border-[#d5d5d5] p-1">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+                일
+              </p>
+            </div>
+          </div>
+          <div class="flex border-t items-center border-[#d5d5d5]">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                주소
+              </p>
+            </div>
+            <div class="p-2">
+              <p class="mb-2 space-x-2"><input type="text" name="" id="" class="border border-[#d5d5d5] p-1"> <button
+                  type="button" class="py-1 px-4 border border-[#242424] text-white bg-[#242424]">우편번호</button></p>
+              <p class="space-x-2"><input type="text" name="" id="" class="border border-[#d5d5d5] p-1"> <input
+                  placeholder="상세 주소를 입력해 주세요." type="text" name="" id="" class="border border-[#d5d5d5] p-1"></p>
+            </div>
+          </div>
+          <div class="flex border-t items-center border-[#d5d5d5]">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                이메일
+              </p>
+            </div>
+            <div class="p-2 flex gap-2">
+              <div>
+                <input type="text" name="" id="" class="border border-[#d5d5d5] p-1">
+              </div>
+              <div>
+                @ <input type="url" placeholder="naver.com" name="" id="" class="border border-[#d5d5d5] p-1">
+              </div>
+              <div>
+                <select name="" id="" class="min-w-[90px] border border-[#d5d5d5] p-1">
+                  <option value="">naver.com</option>
+                  <option value="">naver.com</option>
+                  <option value="">naver.com</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center border-t border-[#d5d5d5]">
+            <div class="min-w-[206px] p-2">
+              <p class="font-bold">
+                연락처
+              </p>
+            </div>
+            <div class="p-2 flex gap-2">
+              <p>
+                <input type="tel" placeholder="" name="" id="" class="max-w-[90px] border border-[#d5d5d5] p-1"> -
+              </p>
+              <p>
+                <input type="tel" placeholder="" name="" id="" class="max-w-[90px] border border-[#d5d5d5] p-1"> -
+              </p>
+              <p>
+                <input type="tel" placeholder="" name="" id="" class="max-w-[90px] border border-[#d5d5d5] p-1">
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="mt-8">
       <h2 class="font-semibold text-xl mb-4">
-        최근 주문 정보
+        회원정보 수정
       </h2>
       <div class="max-w-7xl mx-auto">
-        <!-- Order Table -->
-        <table class="table-auto w-full border-collapse border  border-x-0 border-gray-200">
-          <thead>
-            <tr class="bg-white">
-              <th class="text-center border  border-x-0 px-4 py-2">주문일자</th>
-              <th class="text-center border  border-x-0 px-4 py-2">상품명</th>
-              <th class="text-center border  border-x-0 px-4 py-2">결제금액</th>
-              <th class="text-center border  border-x-0 px-4 py-2">주문상세</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(order, index) in paginatedData" :key="index" class="hover:bg-gray-100">
-              <td class="text-center border border-x-0 px-4 py-2">{{ order.date }}</td>
-              <td class="text-center border border-x-0 px-4 py-2">{{ order.product }}</td>
-              <td class="text-center border border-x-0 px-4 py-2">{{ order.amount }}</td>
-              <td class="text-center border border-x-0 px-4 py-2">
-                <button class="bg-gray-200 px-4 py-2 rounded">조회</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Pagination Controls -->
-        <div class="mt-4 flex justify-center">
-          <button @click="prevPage" :disabled="currentPage === 1"
-            class="px-3 py-1 mx-1 bg-white text-black rounded-full hover:bg-gray-400">
-            <i class="fa fa-chevron-left"></i>
-          </button>
-
-          <button v-for="page in totalPages" :key="page" @click="goToPage(page)"
-            :class="{ 'bg-black text-white': currentPage === page, 'bg-white': currentPage !== page }"
-            class="px-3 py-1 mx-1 rounded-full hover:bg-gray-400">
-            {{ page }}
-          </button>
-
-          <button @click="nextPage" :disabled="currentPage === totalPages"
-            class="px-3 py-1 mx-1 bg-white rounded-full hover:bg-gray-400">
-            <i class="fa fa-chevron-right"></i>
-          </button>
+        <div class="flex flex-col">
+          <div class="flex border-t border-[#d5d5d5]">
+            <div class="p-2 space-y-4">
+              <p><label for="sms"><input type="checkbox" name="sms" id=""> SMS</label></p>
+              <p><label for="email"><input type="checkbox" name="email" id=""> E-mail</label></p>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="space-x-2 text-center mt-4">
+        <button type="button" class="min-w-[172px] py-2 px-6 bg-[#EAEAEA] text-black rounded-2xl">회원탈퇴</button>
+        <button type="button" class="min-w-[172px] py-2 px-6 bg-[#CE8900] text-white rounded-2xl">회원정보 수정</button>
       </div>
     </div>
   </div>
