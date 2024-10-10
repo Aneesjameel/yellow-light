@@ -33,7 +33,7 @@
         </div>
   
         <!-- Right Section: Product Details -->
-        <div class="w-full md:w-1/2 md:pl-10">
+        <div class="w-full md:w-1/2 md:pl-10 gap-3">
           <div class="mt-2 flex space-x-1" v-if="labels">
           <span v-for="(label, labelIndex) in labels" :key="labelIndex" :class="label.class"><img src="/public/car.png" class="h-3 mr-2"/>{{ label.text }}</span>
         </div>
