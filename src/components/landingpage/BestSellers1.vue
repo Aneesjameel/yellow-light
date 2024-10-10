@@ -4,7 +4,7 @@
         <h2 class="text-4xl font-bold mb-4 text-gold ">BEST SELLERS</h2>
         <h2 class="text-xl  mb-4 text-gold">이달의 인기상품을 확인해 보세요!</h2>
         
-        <div class="grid grid-cols-4 gap-6 mt-10">
+        <div class="grid md:grid-cols-4 gap-6 mt-10 grid-cols-2">
           <div v-for="product in products" :key="product.id" class="text-center">
             <img :src=" product.img" alt="Product Image" class=" h-[376px] w-[276px] object-cover rounded-tr-2xl mb-5">
             <h3 class="text-lg text-left">{{ product.name }}</h3>

@@ -5,6 +5,7 @@
         <h1 class="font-semibold text-xl">관심상품</h1>
       </div>
       <!-- Cart Table -->
+      <div class="  overflow-auto">
       <table class="min-w-full table-auto">
         <thead class="bg-white border-t-2 border-black border-b-[1px] border-b-[#D0D0D0]">
           <tr>
@@ -72,7 +73,7 @@
           </tr>
         </tbody>
       </table>
-
+</div>
       <!-- Total Price Section -->
       <div class="min-w-full mt-6 flex justify-end">
         <div class="space-x-2">

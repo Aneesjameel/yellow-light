@@ -1,6 +1,7 @@
 <!-- TabTwo.vue (same structure as TabOne.vue but with different data) -->
 <template>
   <div>
+    <div class="  overflow-auto">
     <table class="min-w-full divide-y divide-gray-200">
       <tbody class="bg-white divide-y divide-gray-200">
         <tr v-for="item in tabTwoData" :key="item.id" valign="middle">
@@ -28,6 +29,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 </template>
 

@@ -274,6 +274,11 @@ h6{
 .container {
   max-width: 1200px !important;
 }
+th,
+td {
+  /* border: 1px solid #ddd; */
+  padding:8px
+}
 @media screen and (max-width:767px){
   .sliderDiv{
     max-width: 314px;
@@ -285,6 +290,10 @@ h6{
         transform: translate(-18%, -50%);
     }
 }
-
+th,
+td {
+  /* border: 1px solid #ddd; */
+  min-width:200px
+}
 }
 }

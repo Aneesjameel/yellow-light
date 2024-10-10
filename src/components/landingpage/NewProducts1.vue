@@ -3,13 +3,13 @@
       <div class="container mx-auto ">
       <!-- Slider Title -->
       <div class="flex text-golden  items-center">
-        <div class="w-1/4">
+        <div class="md:w-1/4 w-1/2">
           <h1 class="text-5xl">New<br>PRODUCTS</h1>
           <div class="flex mt-2">
           <img src="/icons/line.svg"/> <h1>+ 신제품 더보기</h1>
         </div>
         </div>
-        <div class="w-3/4">
+        <div class="md:w-3/4 w-1/2">
            <!-- Slider Container -->
       <div class="relative overflow-hidden p-10">
      

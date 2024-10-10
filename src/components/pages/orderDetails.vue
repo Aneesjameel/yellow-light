@@ -92,6 +92,7 @@
             <!-- Order Details -->
             <div class="p-4 rounded-lg">
                 <h2 class="text-xl font-bold mb-2">주문 상품정보</h2>
+                <div class="  overflow-auto">
                 <table class="w-full table-auto border border-[#d5d5d5]">
                     <thead>
                         <tr>
@@ -108,7 +109,7 @@
                         <tr v-for="(item, index) in orderItems" :key="index">
                             <td class="p-2 text-center border border-[#d5d5d5]">
                                 <div class="flex items-center gap-4">
-                                    <img src="/products/product.png" alt="" class="w-24 h-24">
+                                    <img src="/products/1.png" alt="" class="w-24 h-24">
                                      {{ item.productName }}
                                 </div>
                             </td>
@@ -131,6 +132,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
 
             <div class="space-x-2 text-center mt-4">

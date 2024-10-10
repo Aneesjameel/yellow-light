@@ -49,10 +49,10 @@
         <p class="text-sm text-black font-bold">{{ bulbType }}</p>
        
         <div class="flex p-3">
-          <Div class="w-1/4 font-bold text-xl">
+          <Div class="md:w-1/4 w-[20%]  font-bold text-xl">
             색상
           </Div>
-          <Div class="w-3/4">
+          <Div class="md:w-3/4 w-[80%]">
             <div class="grid grid-cols-3 gap-4 ">
     <!-- Option Item -->
     <div
@@ -80,10 +80,10 @@
           </Div>
         </div>
         <div class="flex p-3">
-          <Div class="w-1/4 font-bold text-xl">
+          <Div class="md:w-1/4 w-[20%]  font-bold text-xl">
             색상
           </Div>
-          <Div class="w-3/4">
+          <Div class="md:w-3/4 w-[80%]">
             <div class="grid grid-cols-3 gap-4 ">
     <!-- Option Item -->
     <div
@@ -111,10 +111,10 @@
           </Div>
         </div>
         <div class="flex p-3 bg-gray-100">
-          <Div class="w-1/4 font-bold text-xl">
+          <Div class="md:w-1/4 w-[20%]  font-bold text-xl">
             색상
           </Div>
-          <Div class="w-3/4">
+          <Div class="md:w-3/4 w-[80%]">
             <div class="grid grid-cols-3 gap-4 ">
     <!-- Option Item -->
     <div
@@ -161,7 +161,7 @@
           </div>
   
         
-          <div class="flex space-x-2 w-3/4 mt-10">
+          <div class="flex space-x-2 w-3/4 mt-10 ">
                 
                 <router-link  to="cart" class="px-4 py-2 bg-gray-600 text-white rounded-[50px] hover:bg-gray-600  w-full text-center items-center justify-center">
                   장바구니

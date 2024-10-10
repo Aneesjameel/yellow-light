@@ -1,6 +1,7 @@
 <!-- TabOne.vue -->
 <template>
     <div>
+        <div class="  overflow-auto">
         <table class="min-w-full divide-y divide-gray-200">
             <tbody class="bg-white divide-y divide-gray-200">
                 <tr v-for="item in tabOneData" :key="item.id">
@@ -24,6 +25,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
     <!-- Modal popup -->
     <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">

@@ -26,6 +26,7 @@
 
     <div class="max-w-7xl mx-auto">
       <!-- Order Table -->
+      <div class="  overflow-auto">
       <table class="table-auto w-full border-collapse border  border-x-0 border-gray-200">
         <thead>
           <tr class="bg-white">
@@ -58,7 +59,7 @@
           </tr>
         </tbody>
       </table>
-
+</div>
       <!-- Pagination Controls -->
       <div class="mt-4 flex justify-center">
         <button @click="prevPage" :disabled="currentPage === 1"

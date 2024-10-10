@@ -4,7 +4,7 @@
         <h2 class="text-4xl font-bold mb-4 text-gold ">LIVING ∙ BED ROOM</h2>
         <h2 class="text-xl  mb-4 text-gold">거실/침실조명</h2>
         
-        <div class="grid md:grid-cols-4 gap-6 mt-10 justify-center md:justify-start">
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-6 mt-10 justify-center md:justify-start">
           <div v-for="product in products" :key="product.id" class="text-center">
             <img :src=" product.img" alt="Product Image" class=" h-[376px] w-[276px] object-cover rounded-tr-2xl mb-5">
             <h3 class="text-lg text-left">{{ product.name }}</h3>

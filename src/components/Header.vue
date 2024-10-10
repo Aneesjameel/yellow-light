@@ -8,11 +8,11 @@
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
           <router-link to="/"><img src="/logo.png" style="height:45px"></router-link>
-          <router-link v-for="item in navigation"  :to="item.pageLink" :class="[item.current ? ' text-yellow  items-center  flex' : 'text-white    hover:text-yellow  items-center  flex', 'rounded-md px-3 py-2 text-sm font-medium items-center  flex']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</router-link>
+          <router-link v-for="item in navigation"  :to="item.pageLink" :class="[item.current ? ' text-yellow  items-center  flex' : 'text-white    hover:text-yellow  items-center  flex', 'rounded-md px-3 py-2 md:text-sm text-[12px] font-medium items-center  flex']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</router-link>
         </div>
         
       </div>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 sm:pr-0 hidden md:ml-6 md:block">
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto  sm:pr-0 hidden md:ml-6 md:block">
         <div class="flex space-x-4">
         
           <!-- <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? ' text-yellow  items-center  flex' : 'text-white  hover:text-yellow  items-center  flex', 'rounded-md px-3 py-2 text-sm font-medium items-center  flex']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a> -->

@@ -5,6 +5,7 @@
         <h1 class="font-semibold text-xl">장바구니</h1>
       </div>
       <!-- Cart Table -->
+       <div class="  overflow-auto">
       <table class="min-w-full table-auto">
         <thead class="bg-white border-t-2 border-black border-b-[1px] border-b-[#D0D0D0]">
           <tr>
@@ -19,7 +20,7 @@
             <th class="px-6 py-2 text-center">선택</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="overflow-auto">
           <tr v-for="(item, index) in cartItems" :key="index" class="border-b" valign="middle">
             <td class="px-6 py-6">
               <input type="checkbox" v-model="item.selected" class="mr-2" />
@@ -62,7 +63,7 @@
           </tr>
         </tbody>
       </table>
-
+    </div>
       <!-- Total Price Section -->
       <div class="min-w-full mt-6 flex justify-end">
         <div class="space-x-2">
@@ -207,9 +208,5 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
-  /* border: 1px solid #ddd; */
-  padding: 8px;
-}
+
 </style>

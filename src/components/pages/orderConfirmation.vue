@@ -19,6 +19,7 @@
   
          <div>
           <div class="w-2/3 mx-auto">
+            <div class="  overflow-auto">
             <table class="min-w-full table-auto">
               <thead class="bg-white ">
                 <tr>
@@ -39,6 +40,7 @@
                 </tr>
               </tbody>
             </table>
+            </div>
           </div>
          </div>
   

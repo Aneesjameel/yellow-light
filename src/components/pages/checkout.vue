@@ -1,24 +1,24 @@
 <template>
-  <div class="container mx-auto px-4 mt-10 mb-10">
-    <div class="px-[100px] py-[50px] max-w-5xl mx-auto bg-white border border-[#D5D5D5]">
+  <div class="container mx-auto px-4 mt-10 mb-10 overflow-auto">
+    <div class="md:px-[100px] md:py-[50px] max-w-5xl mx-auto bg-white border border-[#D5D5D5] px-2">
       <div class="brand mb-8 text-center">
         <h1 class="font-semibold text-xl">주문 정보</h1>
       </div>
       <form @submit.prevent="submitForm">
 
-        <div class="flex gap-6 items-center mb-4">
+        <div class="flex gap-6 items-center mb-4 md:flex-row flex-col">
           <label for="name" class="block text-gray-700">주문자*</label>
           <input type="text" id="name" v-model="form.name" placeholder="이름을 입력해 주세요."
             class="mt-2 p-2 border border-gray-300 rounded flex flex-auto" required />
         </div>
 
-        <div class="flex gap-6 items-center mb-4">
-          <div class="flex gap-6 items-center w-1/2">
+        <div class="flex gap-6 items-center mb-4 md:flex-row flex-col">
+          <div class="flex gap-6 items-center w-full md:w-1/2 ">
             <label for="email" class="block text-gray-700">이메일*</label>
             <input type="email" id="email" v-model="form.email" placeholder="이메일 주소를 입력해 주세요."
               class="mt-2 p-2 border border-gray-300 rounded flex flex-auto" required />
           </div>
-          <div class="flex gap-0 items-center w-1/2">
+          <div class="flex gap-0 items-center w-full md:w-1/2 ">
             <span class="mt-2 p-2 border border-gray-300 rounded-r bg-gray-100 text-gray-700">@</span>
             <select v-model="form.emailDomain" class="mt-2 p-2 border border-gray-300 rounded ml-2 flex flex-auto">
               <option value="naver.com">naver.com</option>
@@ -30,8 +30,8 @@
         </div>
 
 
-        <div class="flex gap-6 mb-4 w-1/2">
-          <div class="flex gap-6 items-center w-1/2">
+        <div class="flex gap-6 mb-4 w-full md:w-1/2   md:flex-row flex-col">
+          <div class="flex gap-6 items-center w-full md:w-1/2 ">
             <label for="phone" class="block text-gray-700">일반전화</label>
             <select class="flex flex-auto p-2 border border-gray-300 rounded">
               <option value="02">02</option>
@@ -39,7 +39,7 @@
               <option value="032">032</option>
             </select>
           </div>
-          <div class="flex flex-auto gap-6 items-center w-1/2">
+          <div class="flex flex-auto gap-6 items-center w-full md:w-1/2 ">
             <input type="text" v-model="form.landlineMiddle" placeholder="중간 번호"
               class="border border-gray-300 flex flex-auto p-2 rounded w-1/4" />
             <input type="text" v-model="form.landlineEnd" placeholder="끝 번호"
@@ -47,8 +47,8 @@
           </div>
         </div>
 
-        <div class="flex gap-6 mb-4 w-1/2">
-          <div class="flex gap-6 items-center w-1/2">
+        <div class="flex gap-6 mb-4 w-full md:w-1/2   md:flex-row flex-col">
+          <div class="flex gap-6 items-center w-full md:w-1/2 ">
             <label for="phone" class="block text-gray-700">휴대전화*</label>
             <select class="flex flex-auto p-2 border border-gray-300 rounded">
               <option value="02">02</option>
@@ -56,7 +56,7 @@
               <option value="032">032</option>
             </select>
           </div>
-          <div class="flex flex-auto gap-6 items-center w-1/2">
+          <div class="flex flex-auto gap-6 items-center w-full md:w-1/2 ">
             <input type="text" v-model="form.landlineMiddle" placeholder="중간 번호"
               class="border border-gray-300 flex flex-auto p-2 rounded w-1/4" />
             <input type="text" v-model="form.landlineEnd" placeholder="끝 번호"
@@ -84,19 +84,19 @@
           <h2 class="font-semibold text-xl">배송지</h2>
         </div>
 
-        <div class="flex gap-6 items-center mb-4">
+        <div class="flex gap-6 items-center mb-4 md:flex-row flex-col">
           <label for="name" class="block text-gray-700">받는사람*</label>
           <input type="text" id="name" v-model="form.name" placeholder="이름을 입력해 주세요."
             class="mt-2 p-2 border border-gray-300 rounded flex flex-auto" required />
         </div>
 
-        <div class="flex gap-6 items-center mb-4">
+        <div class="flex gap-6 items-center mb-4 md:flex-row flex-col">
           <div class="flex gap-6 items-center ">
             <label for="email" class="block text-gray-700">이메일*</label>
             <input type="email" id="email" v-model="form.email" placeholder="이메일 주소를 입력해 주세요."
               class="mt-2 p-2 border border-gray-300 rounded flex flex-auto" required />
           </div>
-          <div class="flex gap-0 items-center w-1/2">
+          <div class="flex gap-0 items-center w-full md:w-1/2 ">
             <span class="mt-2 p-2 border border-gray-300 rounded-r bg-gray-100 text-gray-700">@</span>
             <select v-model="form.emailDomain" class="mt-2 p-2 border border-gray-300 rounded ml-2 flex flex-auto">
               <option value="naver.com">naver.com</option>
@@ -108,8 +108,8 @@
         </div>
 
 
-        <div class="flex gap-6 mb-4 w-1/2">
-          <div class="flex gap-6 items-center w-1/2">
+        <div class="flex gap-6 mb-4 w-full md:w-full md:w-1/2  md:flex-row flex-col">
+          <div class="flex gap-6 items-center w-full md:w-1/2  md:flex-row flex-col">
             <label for="phone" class="block text-gray-700">일반전화</label>
             <select class="flex flex-auto p-2 border border-gray-300 rounded">
               <option value="02">02</option>
@@ -117,7 +117,7 @@
               <option value="032">032</option>
             </select>
           </div>
-          <div class="flex flex-auto gap-6 items-center w-1/2">
+          <div class="flex flex-auto gap-6 items-center w-full md:w-1/2 ">
             <input type="text" v-model="form.landlineMiddle" placeholder="중간 번호"
               class="border border-gray-300 flex flex-auto p-2 rounded w-1/4" />
             <input type="text" v-model="form.landlineEnd" placeholder="끝 번호"
@@ -125,8 +125,8 @@
           </div>
         </div>
 
-        <div class="flex gap-6 mb-4 w-1/2">
-          <div class="flex gap-6 items-center w-1/2">
+        <div class="flex gap-6 mb-4 w-full md:w-full md:w-1/2   md:flex-row flex-col">
+          <div class="flex gap-6 items-center w-full md:w-1/2 ">
             <label for="phone" class="block text-gray-700">휴대전화*</label>
             <select class="flex flex-auto p-2 border border-gray-300 rounded">
               <option value="02">02</option>
@@ -134,7 +134,7 @@
               <option value="032">032</option>
             </select>
           </div>
-          <div class="flex flex-auto gap-6 items-center w-1/2">
+          <div class="flex flex-auto gap-6 items-center w-full md:w-1/2 ">
             <input type="text" v-model="form.landlineMiddle" placeholder="중간 번호"
               class="border border-gray-300 flex flex-auto p-2 rounded w-1/4" />
             <input type="text" v-model="form.landlineEnd" placeholder="끝 번호"
@@ -234,16 +234,16 @@
 
     <!-- Payment Method Section -->
     <div class="flex gap-4 font-bold mb-1 flex-wrap md:flex-nowrap">
-      <button class="bg-black text-white w-1/2 py-4">가상계좌</button>
-      <button class="border border-gray-400 text-gray-700 w-1/2 py-4">무통장입금</button>
+      <button class="bg-black text-white w-full md:w-1/2  py-4">가상계좌</button>
+      <button class="border border-gray-400 text-gray-700 w-full md:w-1/2  py-4">무통장입금</button>
     </div>
     <div class="flex gap-4 mt-5 font-bold mb-1 flex-wrap md:flex-nowrap">
-      <button class="border border-gray-400 text-gray-700 w-1/2 py-4">가상계좌</button>
-      <button class="border border-gray-400 text-gray-700 w-1/2 py-4"><div class="flex items-center justify-center"><img src="/public/pay.png" class="mr-5"/>무통장입금</div></button>
+      <button class="border border-gray-400 text-gray-700 w-full md:w-1/2  py-4">가상계좌</button>
+      <button class="border border-gray-400 text-gray-700 w-full md:w-1/2  py-4"><div class="flex items-center justify-center"><img src="/public/pay.png" class="mr-5"/>무통장입금</div></button>
     </div>
     <div class="flex gap-4 mt-5 font-bold mb-1 flex-wrap md:flex-nowrap">
-      <button class="border border-gray-400 text-gray-700 w-1/2 py-4">가상계좌</button>
-      <button class="border border-gray-400 text-gray-700 w-1/2 py-4">무통장입금</button>
+      <button class="border border-gray-400 text-gray-700 w-full md:w-1/2  py-4">가상계좌</button>
+      <button class="border border-gray-400 text-gray-700 w-full md:w-1/2  py-4">무통장입금</button>
     </div>
         <!-- Checkbox for reusing payment details -->
         <div class="mb-4 mt-10">

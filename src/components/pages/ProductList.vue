@@ -3,11 +3,11 @@
     <h1 class="text-2xl text-gold text-center text-bold">현관/베란다 조명</h1>
     
     <!-- Tabs Section -->
-    <div class="flex items-center justify-center space-x-4 md:space-y-0 mb-10 mt-5 flex-wrap space-y-4">
+    <div class="flex items-center justify-center mb-10 mt-5 flex-wrap gap-4">
       <button 
         v-for="(tab, index) in tabs" 
         :key="index" 
-        :class="{'bg-yellow-500 text-white': activeTab === index, 'border-gold text-gold border text-bold': activeTab !== index}"
+        :class="{'bg-yellow-500 text-white ': activeTab === index, 'border-gold text-gold border text-bold mt-0': activeTab !== index}"
         @click="activeTab = index"
         class="px-4 py-2 rounded-full focus:outline-none">
         {{ tab.label }}

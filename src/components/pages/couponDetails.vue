@@ -12,6 +12,7 @@
       </form>
     </div>
     <div>
+      <div class="  overflow-auto">
       <table class="min-w-full table-auto border-y border-x-0">
         <thead>
           <tr>
@@ -52,6 +53,7 @@
         </tbody>
       </table>
     </div>
+    </div>
     <div class="mt-10">
       <p class="font-bold">주문 할인쿠폰 적용방법</p>
       <p>주문서 쿠폰 선택에서 고객님이 보유하신 [쿠폰이름]을 선택하시면 할인금액(또는 적립금액)이 나타납니다.</p>
@@ -73,4 +75,10 @@ export default {
 
 <style scoped>
 /* You can add custom styles here if needed */
+th,
+td {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  min-width:200px
+}
 </style>

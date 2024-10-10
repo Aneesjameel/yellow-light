@@ -73,14 +73,14 @@
               </div>
   
               <!-- Price Display -->
-              <div class="flex items-center space-x-2">
+              <div class="flex items-center space-x-2 md:flex-row flex-col">
                 <span class="line-through text-gray-500">55,000₩</span>
                 <span class="text-xl font-semibold">50,000₩</span>
               </div>
             </div>
               <!-- Add to Cart Buttons -->
                <h1 class="font-bold">주문금액</h1>
-              <div class="flex space-x-2">
+              <div class="flex space-x-2 md:flex-row flex-col gap-2">
                 
                 <router-link   to="cart" ><button class="px-4 py-2 bg-gray-600 text-white rounded-[50px] hover:bg-gray-600">
                   장바구니
