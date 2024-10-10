@@ -3,7 +3,7 @@
     <div class="brand mb-8">
       <h1 class="font-semibold text-xl">마이페이지</h1>
     </div>
-    <div class="flex items-center justify-between py-3 px-16 bg-[#FFF2D4] mb-5">
+    <div class="flex items-center justify-between py-3 px-16 bg-[#FFF2D4] mb-5 flex-wrap">
       <p class="p-4 font-bold">주문내역</p>
       <p class="p-4 font-bold">쿠폰내역</p>
       <p class="p-4 font-bold">장바구니</p>
@@ -18,7 +18,7 @@
       <div class="max-w-7xl mx-auto">
         <div class="  overflow-auto">
         <!-- Order Table -->
-        <table class="table-auto w-full border-collapse border  border-x-0 border-gray-200">
+        <table class="table-auto w-full border-collapse border  border-x-0 border-gray-200 flex-wrap">
           <thead>
             <tr class="bg-white">
               <th class="text-center border  border-x-0 px-4 py-2">주문일자</th>

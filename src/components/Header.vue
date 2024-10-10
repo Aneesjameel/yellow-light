@@ -2,7 +2,7 @@
 
 
 <template>
-  <div class="ezy__nav1 light  bg-black text-white relative">
+  <div class="ezy__nav1 light  bg-opacity-60 bg-black text-white relative">
     <div class="container mx-auto flex items-center justify-between py-4 px-4">
       <!-- Logo Section -->
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">

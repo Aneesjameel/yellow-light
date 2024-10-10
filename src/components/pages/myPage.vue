@@ -3,7 +3,7 @@
     <div class="brand mb-8">
       <h1 class="font-semibold text-xl">마이페이지</h1>
     </div>
-    <div class="flex items-center justify-between py-3 px-16 bg-[#FFF2D4] mb-5">
+    <div class="flex items-center justify-between py-3 px-16 bg-[#FFF2D4] mb-5 flex-wrap">
       <p class="p-4 font-bold">주문내역</p>
       <p class="p-4 font-bold">쿠폰내역</p>
       <p class="p-4 font-bold">장바구니</p>
@@ -11,7 +11,7 @@
       <p class="p-4 font-bold">리뷰 관리</p>
       <p class="p-4 font-bold">회원정보</p>
     </div>
-    <div class="flex bg-[#F3F3F3] py-10 px-10 items-center">
+    <div class="flex bg-[#F3F3F3] py-10 px-10 items-center ">
       <div class="flex flex-auto flex-col">
         <p class="font-bold">홍길동 <small class="font-normal">(admin1)</small></p>
       </div>
@@ -34,8 +34,8 @@
         <h2 class="text-xl font-semibold mb-4">주문 처리 현황</h2>
 
         <!-- Order Status Steps -->
-        <div class="flex justify-between items-center border-b border-t p-4">
-          <div class="flex items-center space-x-10 pl-6">
+        <div class="flex justify-between items-center border-b border-t p-4 flex-wrap">
+          <div class="flex items-center space-x-10 pl-6 flex-wrap md:flex-row  flex-col">
             <!-- Step 1 -->
             <div class="text-center">
               <span class="block text-lg font-bold">0</span>

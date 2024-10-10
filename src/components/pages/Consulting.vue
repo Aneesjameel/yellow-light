@@ -1,12 +1,12 @@
 <template>
-  <div class="page-header bg-consulting flex items-center min-h-[450px]">
+  <div class="page-header bg-consulting flex items-center min-h-[450px] bg-cover">
     <div class="container mx-auto px-4 text-end">
       <h1 class="text-white font-bold text-4xl">CONSULTING</h1>
       <p class="text-white">온/오프라인 무료 견적 및 상담</p>
     </div>
   </div>
   <div class="container mx-auto px-4">
-    <div class="border border-[#CBCBCB] mx-auto px-20 py-10 max-w-4xl">
+    <div class="border border-[#CBCBCB] mx-auto md:px-20 py-10 max-w-4xl px-2">
       <div class="brand mb-12">
         <h1 class="text-center text-2xl">
           방문견적/설치관련/디자인관련/기타 문의 등<br>
@@ -63,7 +63,7 @@
                 </p>
               </div>
               <div class="p-2">
-                <div class="flex gap-2">
+                <div class="flex gap-2 flex-wrap">
                   <div class="w-24 h-24" v-for="index in 5" :key="index">
                     <input type="file" ref="fileInputs" @change="uploadImage($event, index)" class="hidden w-24 h-24"
                       accept="image/*">
@@ -94,7 +94,7 @@
               <label for=""><input type="checkbox" name="" id="" class="mr-3"> 전화</label>
             </div>
           </div>
-          <div class="flex justify-center space-x-2 mt-10">
+          <div class="flex justify-center space-x-2 mt-10 flex-wrap">
             <button class="min-w-[259px] mt-4 px-6 py-3 bg-[#fff] text-black border border-black rounded-2xl">
               취소
             </button>

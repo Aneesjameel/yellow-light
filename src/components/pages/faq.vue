@@ -4,7 +4,7 @@
       <h1 class="text-2xl font-bold text-center mb-8">고객센터</h1>
   
       <!-- Tabs Section -->
-      <div class="flex justify-center  my-20">
+      <div class="flex justify-center  my-20 flex-wrap">
         <button
           v-for="tab in tabs"
           :key="tab"
@@ -20,7 +20,7 @@
       </div>
   
       <!-- Sub-Tabs Section -->
-      <div class="flex justify-center space-x-2 my-20">
+      <div class="flex justify-center space-x-2 my-20  flex-wrap">
         <button
           v-for="subTab in subTabs"
           :key="subTab"
@@ -43,7 +43,7 @@
         <input
           type="text"
           placeholder="FAQ 검색"
-          class="w-full max-w-lg px-4 py-2 border border-gray-300 rounded-l-md"
+          class="w-full md:max-w-lg px-4 py-2 border border-gray-300 rounded-l-md"
           v-model="searchQuery"
         />
         <button class="px-4 py-2 bg-gray-800 text-white rounded-r-md">

@@ -1,9 +1,9 @@
 <template>
-  <div class="container mx-auto px-4 mt-10 mb-10">
+  <div class="container mx-auto px-4 mt-10 mb-10 overflow-auto">
     <div class="brand mb-8 text-center">
       <h1 class="font-semibold text-xl">마이페이지</h1>
     </div>
-    <div class="flex items-center justify-between py-3 px-16 bg-[#F2F2F2] mb-5">
+    <div class="flex items-center justify-between py-3 px-16 bg-[#F2F2F2] mb-5 flex-wrap">
       <p class="p-4 font-bold">주문내역</p>
       <p class="p-4 font-bold">쿠폰내역</p>
       <p class="p-4 font-bold">장바구니</p>
@@ -16,8 +16,8 @@
         회원정보 수정
       </h2>
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col">
-          <div class="flex border-t border-[#d5d5d5]">
+        <div class="flex flex-col flex-wrap">
+          <div class="flex border-t border-[#d5d5d5]  flex-wrap   ">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 이름
@@ -27,7 +27,7 @@
               <p>홍길동</p>
             </div>
           </div>
-          <div class="flex border-t border-[#d5d5d5]">
+          <div class="flex border-t border-[#d5d5d5]  flex-wrap   ">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 아이디
@@ -37,7 +37,7 @@
               <p>admin1</p>
             </div>
           </div>
-          <div class="flex border-t border-[#d5d5d5] items-center">
+          <div class="flex border-t border-[#d5d5d5] items-center  flex-wrap  ">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 비밀번호 변경
@@ -48,7 +48,7 @@
                 3종류 8~16자</p>
             </div>
           </div>
-          <div class="flex border-t border-[#d5d5d5] items-center">
+          <div class="flex border-t border-[#d5d5d5] items-center  flex-wrap ">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 비밀번호 확인
@@ -58,13 +58,13 @@
               <p><input type="text" name="" id="" class="border border-[#d5d5d5] p-1"></p>
             </div>
           </div>
-          <div class="flex border-t border-[#d5d5d5]">
+          <div class="flex border-t border-[#d5d5d5]  flex-wrap">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 생년월일
               </p>
             </div>
-            <div class="p-2 flex gap-2">
+            <div class="p-2 flex gap-2  flex-wrap">
               <p>
                 <select name="" id="" class="min-w-[90px] border border-[#d5d5d5] p-1">
                   <option value="">1</option>
@@ -91,7 +91,7 @@
               </p>
             </div>
           </div>
-          <div class="flex border-t items-center border-[#d5d5d5]">
+          <div class="flex border-t items-center border-[#d5d5d5]  flex-wrap">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 주소
@@ -104,13 +104,13 @@
                   placeholder="상세 주소를 입력해 주세요." type="text" name="" id="" class="border border-[#d5d5d5] p-1"></p>
             </div>
           </div>
-          <div class="flex border-t items-center border-[#d5d5d5]">
+          <div class="flex md:flex-row flex-col border-t items-center border-[#d5d5d5]  flex-wrap">
             <div class="min-w-[206px] p-2">
               <p class="font-bold">
                 이메일
               </p>
             </div>
-            <div class="p-2 flex gap-2">
+            <div class="p-2 flex gap-2  flex-wrap">
               <div>
                 <input type="text" name="" id="" class="border border-[#d5d5d5] p-1">
               </div>
