@@ -56,7 +56,7 @@
 
       <!-- Mobile Menu Button (visible on mobile only) -->
       <div class="md:hidden">
-        <button @click="toggleMenu" class="focus:outline-none">
+        <button @click="toggleMenu" class="focus:outline-none pt-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -1,9 +1,9 @@
 <template>
   <div class="  relative mt-10 p-2 bg-black text-white">
     <!-- Slider Title -->
-     <div class="container mx-auto p-20">
-    <div class="flex  items-center justify-between gap-4">
-      <div class="w-1/2">
+     <div class="container mx-auto md:p-20 p-2">
+      <div class="flex md:flex-row flex-col items-center justify-between gap-4">
+      <div class="md:w-1/2">
         
         <img src="/icons/star1.png"/>
         <h1 class="text-5xl mb-10 mt-10">We are<br>Life Style Guide</h1>
@@ -13,7 +13,7 @@
         <button class="w-[200px] h-[48px] bg-white text-black rounded-[50px]">무료 컨설팅 신청하기</button>
       </div>
       </div>
-      <div class="w-1/2 text-right flex justify-end">
+      <div class="md:w-1/2 text-right flex justify-end">
          <!-- Slider Container -->
           <img src="/products/lifestyleguide1.png"/>
       </div>

@@ -80,7 +80,7 @@
             </div>
               <!-- Add to Cart Buttons -->
                <h1 class="font-bold">주문금액</h1>
-              <div class="flex space-x-2 md:flex-row flex-col gap-2">
+              <div class="flex space-x-2 md:flex-row flex-col gap-2 items-center">
                 
                 <router-link   to="cart" ><button class="px-4 py-2 bg-gray-600 text-white rounded-[50px] hover:bg-gray-600">
                   장바구니
@@ -90,7 +90,7 @@
                 </button></router-link>
                 <img
       @click="toggleHeart"
-      :src="[ isHearted ?  '/public/heart1.png' :'/public/heart2.png']"/>
+      :src="[ isHearted ?  '/public/heart1.png' :'/public/heart2.png']" class="w-[48px] h-[48px]"/>
    
 
               </div>

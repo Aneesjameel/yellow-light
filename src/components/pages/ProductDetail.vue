@@ -3,7 +3,7 @@
       <!-- Product Image and Details -->
       <div class="flex flex-col md:flex-row">
         <!-- Left Section: Product Images -->
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2" @touchstart="startSwipe" @touchmove="onSwipe" @touchend="endSwipe">
           <img :src="mainImage" class="rounded-lg w-[454px] h-[454px]" alt="Main Product Image" />
           <div class="flex mt-4 space-x-2 relative">
             <button
@@ -210,6 +210,8 @@
           "products/2.png",
           "products/3.png",
         ],
+        startX: 0, // To store the initial touch position
+        endX: 0, // To store the ending touch position
         selectedImageIndex: 0,
         quantity: 1,
         colors: [
@@ -287,6 +289,22 @@
           this.quantity--;
         }
       },
+      startSwipe(event) {
+      this.startX = event.touches[0].clientX;
+    },
+    onSwipe(event) {
+      this.endX = event.touches[0].clientX;
+    },
+    endSwipe() {
+      const swipeDistance = this.startX - this.endX;
+      const threshold = 50; // Minimum swipe distance in pixels to trigger action
+
+      if (swipeDistance > threshold) {
+        this.nextImage();
+      } else if (swipeDistance < -threshold) {
+        this.prevImage();
+      }
+    },
     },
   };
   </script>

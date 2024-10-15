@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto">
-      <section class=" p-10 text-center ">
+      <section class=" p-2 md:p-10 text-center ">
         <h2 class="text-4xl font-bold mb-4 text-gold ">BEST SELLERS</h2>
         <h2 class="text-xl  mb-4 text-gold">이달의 인기상품을 확인해 보세요!</h2>
         

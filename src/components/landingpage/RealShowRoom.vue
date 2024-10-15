@@ -1,19 +1,24 @@
 <template>
-   <div class="container mx-auto relative mt-10">
+  <div
+    class="container mx-auto relative mt-10"
+    @touchstart="handleTouchStart"
+    @touchmove="handleTouchMove"
+    @touchend="handleTouchEnd"
+  >
     <!-- Slider Title -->
-    <h1 class=" text-6xl font-semibold mb-6 text-capitalize text-[#ABA79F] -rotate-90 text-abc absolute">Real Show Room</h1>
-     
+    <h1 class="text-6xl font-semibold mb-6 text-capitalize text-[#ABA79F] -rotate-90 text-abc absolute">Real Show Room</h1>
 
     <!-- Slider Container -->
-    <div class="relative overflow-hidden p-10">
+    <div class="relative overflow-hidden md:p-10 p-2">
       <h2 class="text-lg text-gold pl-3">약 231,242명이 사랑해 주신<br>
         노랑조명 고객님들의 생생한 실제 후기</h2>
+
       <!-- Scrollable slider track -->
       <div 
         class="flex transition-transform duration-500 ease-in-out p-5"
         :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
         
-        <!-- Grouped Category Items (1 image per slide on mobile, 8 on larger screens) -->
+        <!-- Grouped Category Items (1 image per slide on mobile, multiple on larger screens) -->
         <div
           v-for="(group, groupIndex) in chunkedSlides"
           :key="groupIndex"
@@ -26,30 +31,28 @@
             class="flex flex-col items-center w-full md:w-auto"> <!-- Full width on mobile, auto width on larger screens -->
             
             <!-- Circular Image -->
-            <div class=" p-4 relative">
+            <div class="p-4 relative">
               <img :src="slide.image" alt="Category Image" class="h-[441px] w-[312px]">
               <p class="mt-2 text-center text-sm absolute bottom-7 p-2 text-white">{{ slide.title }}</p>
             </div>
-             <!-- Right Arrow -->
-    
-         
           </div>
         </div>
       </div>
     </div>
- <!-- Horizontal Line Navigation (clickable) -->
- <div class="absolute md:bottom-4 bottom-1 left-0 container slider-center px-8">
-        <div class="h-1 w-full bg-gray-300 flex relative">
-          <!-- Create segments for each slide, each clickable -->
-          <div
-            v-for="(slide, index) in slides"
-            :key="index"
-            @click="currentSlide = index"
-            :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-golden' : 'bg-gray-400']"
-            :style="{ width: (1 / slides.length) * 100 + '%' }">
-          </div>
+
+    <!-- Horizontal Line Navigation (clickable) -->
+    <div class="absolute md:bottom-4 bottom-1 left-0 container slider-center px-8">
+      <div class="h-1 w-full bg-gray-300 flex relative">
+        <!-- Create segments for each slide, each clickable -->
+        <div
+          v-for="(slide, index) in slides"
+          :key="index"
+          @click="currentSlide = index"
+          :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-golden' : 'bg-gray-400']"
+          :style="{ width: (1 / slides.length) * 100 + '%' }">
         </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -58,6 +61,8 @@ export default {
   data() {
     return {
       currentSlide: 0,
+      startX: 0, // Starting X coordinate of touch
+      endX: 0, // Ending X coordinate of touch
       slides: [
         { title: '좋아요. 부엌에서 사용하기 은은해서 부담도 없고..', image: '/products/bestshowroom/1.png' },
         { title: '좋아요. 부엌에서 사용하기 은은해서 부담도 없고..', image: '/products/bestshowroom/2.png' },
@@ -69,7 +74,6 @@ export default {
     };
   },
   computed: {
-    // Group slides into chunks of 1 image for mobile and 8 images for larger screens
     chunkedSlides() {
       const chunkSize = window.innerWidth < 768 ? 1 : 3; // Show 1 image per slide on mobile
       const chunks = [];
@@ -82,7 +86,7 @@ export default {
   mounted() {
     // Automatically cycle through slides every 5 seconds
     setInterval(() => {
-      this.currentSlide = (this.currentSlide + 1) % this.chunkedSlides.length;
+      this.nextSlide();
     }, 5000);
     
     window.addEventListener('resize', () => {
@@ -90,27 +94,42 @@ export default {
     });
   },
   methods: {
+    handleTouchStart(event) {
+      this.startX = event.touches[0].clientX;
+    },
+    handleTouchMove(event) {
+      this.endX = event.touches[0].clientX;
+    },
+    handleTouchEnd() {
+      if (this.startX - this.endX > 50) {
+        // Swipe left (go to the next slide)
+        this.nextSlide();
+      } else if (this.endX - this.startX > 50) {
+        // Swipe right (go to the previous slide)
+        this.prevSlide();
+      }
+    },
     nextSlide() {
       this.currentSlide = (this.currentSlide + 1) % this.chunkedSlides.length;
     },
     prevSlide() {
       this.currentSlide = (this.currentSlide - 1 + this.chunkedSlides.length) % this.chunkedSlides.length;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.text-abc{
+.text-abc {
   height: 200px;
-    width: 500px;
-    text-align: left;
-    position: absolute;
-    left: -159px;
-    top: 184px;
-    z-index: 1;
-
+  width: 500px;
+  text-align: left;
+  position: absolute;
+  left: -159px;
+  top: 184px;
+  z-index: 1;
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

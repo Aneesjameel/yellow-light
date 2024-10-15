@@ -1,7 +1,7 @@
 <template>
   <div class="w-full relative mt-10 p-10 bg-[#FFFBF2]">
     <!-- Slider Title -->
-    <h1 class="text-center text-2xl font-semibold mb-6 text-transform">New Products</h1>
+    <h1 class="text-center text-2xl font-semibold mb-6 text-transform">New Productsd</h1>
 
     <!-- Slider Container -->
     <div class="relative overflow-hidden p-10">
