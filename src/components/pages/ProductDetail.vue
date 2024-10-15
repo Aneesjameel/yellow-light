@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row">
         <!-- Left Section: Product Images -->
         <div class="w-full md:w-1/2">
-          <img :src="mainImage" class="rounded-lg" alt="Main Product Image" />
+          <img :src="mainImage" class="rounded-lg w-[454px] h-[454px]" alt="Main Product Image" />
           <div class="flex mt-4 space-x-2 relative">
             <button
           class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-50 text-white p-2 rounded-full hover:bg-gray-400"
@@ -24,7 +24,7 @@
               v-for="(image, index) in productImages"
               :key="index"
               :src="image"
-              class="w-16 h-16 object-cover rounded-lg cursor-pointer"
+              class="w-[16] h-16 object-cover rounded-lg cursor-pointer"
               @click="selectImage(index)"
               :class="{'ring-2 ring-gray-400': selectedImageIndex === index}"
             />
