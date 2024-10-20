@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css';
 import App from './App.vue'
+import Main from './components/pages/Main.vue'
 import MainPage from './components/pages/MainPage.vue'
 import MainPage1 from './components/pages/MainPage1.vue'
 import MainPage2 from './components/pages/MainPage2.vue'
@@ -49,11 +50,15 @@ const routes = [
           component: login,
         },
         {
-          path: 'MainPage1',
-          component: MainPage1,
+          path: 'Main',
+          component: Main,
         },
         {
           path: 'MainPage',
+          component: MainPage1,
+        },
+        {
+          path: 'MainPage1',
           component: MainPage,
         },
         {

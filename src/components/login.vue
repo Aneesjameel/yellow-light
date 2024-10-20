@@ -20,12 +20,12 @@
                     <!-- Login Button -->
                 
                     <div class="flex flex-col gap-2 items-center justify-center">
-                        <router-link to="/MainPage2" class="w-full cursor-pointer">
+                        <router-link to="/Main" class="w-full cursor-pointer">
                         <button class="rounded-2xl w-full bg-black hover:bg-gray-600 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                             로그인
                         </button>
                     </router-link>
-                        <router-link to="/MainPage" class="w-full cursor-pointer">
+                        <router-link to="/Main" class="w-full cursor-pointer">
                         <button class="relative rounded-2xl w-full bg-[#03C75A] text-white font-bold py-3 px-4 focus:outline-none focus:shadow-outline" type="button">
                             <img src="/btnG.png" alt="" class="absolute top-[9px] left-[10px]"> <!-- Adjust 'left' position if needed -->
                             네이버로 로그인

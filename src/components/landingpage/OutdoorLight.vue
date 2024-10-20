@@ -29,15 +29,15 @@
       data() {
         return {
           products: [
-            { id: 1, name: 'Wall Light', price: '₩215,000',img:'products/bestsellers/Rectangle 16.png',a:'신상품',b:'오늘출발' },
-            { id: 2, name: 'Ceiling Light', price: '₩245,000' ,img:'products/bestsellers/Rectangle 17.png',a:'신상품',b:'오늘출발'},
-            { id: 3, name: 'Sconce', price: '₩275,000',img:'products/bestsellers/Rectangle 18.png',a:'신상품',b:'오늘출발' },
-            { id: 4, name: 'Table Lamp', price: '₩305,000',img:'products/bestsellers/Rectangle 19.png',a:'신상품',b:'오늘출발' },
-            { id: 1, name: 'Wall Light', price: '₩215,000',img:'products/bestsellers/Rectangle 16.png',a:'신상품',b:'오늘출발' },
-            { id: 2, name: 'Ceiling Light', price: '₩245,000' ,img:'products/bestsellers/Rectangle 17.png',a:'신상품',b:'오늘출발'},
-            { id: 3, name: 'Sconce', price: '₩275,000',img:'products/bestsellers/Rectangle 18.png',a:'신상품',b:'오늘출발' },
-            { id: 4, name: 'Table Lamp', price: '₩305,000',img:'products/bestsellers/Rectangle 19.png',a:'신상품',b:'오늘출발' },
-          ]
+        { id: 1, name: '상품이름 상품이름', price: '215,000원', img: 'products/bestsellers/Rectangle 14.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 2, name: '상품이름 상품이름', price: '245,000원', img: 'products/bestsellers/Rectangle 15.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 3, name: '상품이름 상품이름', price: '275,000원', img: 'products/bestsellers/Rectangle 16.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 4, name: '상품이름 상품이름', price: '305,000원', img: 'products/bestsellers/Rectangle 17.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 5, name: '상품이름 상품이름', price: '215,000원', img: 'products/bestsellers/Rectangle 18.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 6, name: '상품이름 상품이름', price: '245,000원', img: 'products/bestsellers/Rectangle 19.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 7, name: '상품이름 상품이름', price: '275,000원', img: 'products/bestsellers/Rectangle 20.png', a: '신상품', b: '오늘출발', isFavorite: false },
+        { id: 8, name: '상품이름 상품이름', price: '305,000원', img: 'products/bestsellers/Rectangle 19.png', a: '신상품', b: '오늘출발', isFavorite: false },
+      ]
         }
       }
     }

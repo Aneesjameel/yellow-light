@@ -27,8 +27,8 @@
     data() {
       return {
         products: [
-          { id: 1, name: 'Wall Light', price: '₩215,000' },
-          { id: 2, name: 'Ceiling Light', price: '₩245,000' },
+          { id: 1, name: 'Wall Light', price: '215,000원' },
+          { id: 2, name: 'Ceiling Light', price: '245,000원' },
           { id: 3, name: 'Sconce', price: '₩275,000' },
           { id: 4, name: 'Table Lamp', price: '₩305,000' },
         ],

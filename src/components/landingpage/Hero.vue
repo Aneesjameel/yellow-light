@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full md:h-screen overflow-hidden md:slider"
+    class="relative w-full md:h-screen overflow-hidden md:slider transparent-to"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
@@ -94,6 +94,7 @@ export default {
 </script>
 
 <style scoped>
+
 .slider-center {
   transform: translateX(-50%);
   left: 50%;
@@ -105,4 +106,8 @@ export default {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.transparent-to{
+  margin-top: -77px;
+}
+
 </style>

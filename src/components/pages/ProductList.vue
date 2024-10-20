@@ -33,7 +33,7 @@
         v-for="(product, index) in paginatedProducts" 
         :key="index"
         class="">
-        <img :src="product.image" :alt="product.name" class="w-full mb-2">
+        <img :src="product.image" :alt="product.name" class=" mb-2 h-[274px] w-[274px]" >
         <p class="text-sm font-semibold">{{ product.name }}</p>
         <p class="text-red-500 text-lg font-bold">
           <span class="mr-2" v-if="product.discountPrice">{{ product.discountPrice }}</span>

@@ -32,8 +32,8 @@
             
             <!-- Circular Image -->
             <div class="p-4 relative">
-              <img :src="slide.image" alt="Category Image" class="h-[441px] w-[312px]">
-              <p class="mt-2 text-center text-sm absolute bottom-7 p-2 text-white">{{ slide.title }}</p>
+              <img :src="slide.image" alt="Category Image" class="h-[441px] w-[320px]">
+              <p class="mt-2 text-center text-sm absolute bottom-7 left-5  text-white  w-[312px] mx-auto" >{{ slide.title }}</p>
             </div>
           </div>
         </div>

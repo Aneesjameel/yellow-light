@@ -7,8 +7,8 @@
       <!-- Logo Section -->
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <router-link to="/"><img src="/logo.png" style="height:45px"></router-link>
-          <router-link v-for="item in navigation"  :to="item.pageLink" :class="[item.current ? ' text-yellow  items-center  flex' : 'text-white    hover:text-yellow  items-center  flex', 'rounded-md px-3 py-2 md:text-sm text-[12px] font-medium items-center  flex']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</router-link>
+          <router-link to="/"><img src="/logo1.svg" style="height:34px"></router-link>
+          <router-link v-for="item in navigation"  :to="item.pageLink" :class="[item.current ? ' text-yellow  items-center  flex' : 'text-white    hover:text-yellow  items-center  flex', 'rounded-md md:px-5 px-3 py-2 md:text-sm text-[12px] font-medium items-center  flex']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</router-link>
         </div>
         
       </div>
@@ -19,8 +19,8 @@
         <!-- Right side (B2B, search, cart, login) -->
 <div class="flex items-center space-x-4">
   <!-- B2B Button -->
-  <button class="border border-white rounded-full px-3 py-1 text-sm">
-    B2B
+  <button class="border border-white rounded-full md:px-5 px-3 py-1 text-sm">
+    B2B <span class="fa fa-caret-right pl-2"></span>
   </button>
 
   <!-- Search Icon -->
@@ -32,11 +32,9 @@
 
   <!-- Cart Icon -->
   <button class="relative text-white hover:text-yellow-500">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l1.5-6H6.4M16 13a3 3 0 11-6 0M7 13V6a2 2 0 012-2h8a2 2 0 012 2v7" />
-    </svg>
+   <img src="/cart.svg"/>
     <!-- Cart item count -->
-    <span class="absolute -top-1 -right-2 bg-red-600 text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">0</span>
+    <span class="absolute -top-1 -right-2 bg-[#D27979] text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">0</span>
   </button>
 
   <!-- User Account Links -->
@@ -137,5 +135,15 @@ const navigation = [
   }
   .ezy__nav1 {
     z-index: 1;
+  
+  
+
+  }
+  .transparent-t{
+      /* z-index: 1; */
+      position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
   }
   </style>
