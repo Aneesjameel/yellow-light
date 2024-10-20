@@ -12,15 +12,15 @@
         <div class="mb-10">
          
           <div class="relative z-0  mb-5 mt-5">
-    <input type="text" id="username" v-model="username" class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-300 focus:outline-none focus:ring-0  peer" placeholder=" " />
-    <label for="username" class="absolute  text-lGrey dark:text-gray-400 duration-300 transform -translate-y-6 scale-125 top-1  origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-y-0 peer-focus:scale-125 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">아이디</label>
+    <input type="text" id="username" v-model="username" class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none   focus:outline-none focus:ring-0  peer" placeholder=" " />
+    <label for="username" class="absolute  text-lGrey  duration-300 transform -translate-y-6 scale-125 top-1  origin-[0] peer-focus:start-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-y-0 peer-focus:scale-125 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">아이디</label>
 </div>
         </div>
         <div class="mb-4">
          
          <div class="relative z-0  mb-5 mt-5">
-   <input type="text" id="password" v-model="password" class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-300 focus:outline-none focus:ring-0  peer" placeholder=" " />
-   <label for="password" class="absolute  text-lGrey dark:text-gray-400 duration-300 transform -translate-y-6 scale-125 top-1  origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-y-0 peer-focus:scale-125 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">비밀번호</label>
+   <input type="text" id="password" v-model="password" class="block py-2.5 px-0 w-full  text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none   focus:outline-none focus:ring-0  peer" placeholder=" " />
+   <label for="password" class="absolute  text-lGrey  duration-300 transform -translate-y-6 scale-125 top-1  origin-[0] peer-focus:start-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-125 peer-placeholder-shown:translate-y-0 peer-focus:scale-125 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">비밀번호</label>
 </div>
        </div>
 

@@ -78,9 +78,9 @@ export default {
       </div>
 
       <div v-if="selectedTab === 'past'">
-        <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+        <ol class="relative border-s border-gray-200 ">                  
           <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
         <div class="timeline">
         <p class="text-lg">9월 2일 (토)</p>
         <div class="border rounded p-4 flex  w-full mb-4">
@@ -107,7 +107,7 @@ export default {
       </div>
     </li>
     <li class="mb-10 ms-4">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
         <div class="timeline">
         <p class="text-lg">5월 2일 (토)</p>
         <div class="border rounded p-4 flex  w-full ">
