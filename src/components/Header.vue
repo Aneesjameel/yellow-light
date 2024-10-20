@@ -7,7 +7,7 @@
       <!-- Logo Section -->
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <router-link to="/"><img src="/logo1.svg" style="height:34px"></router-link>
+          <router-link to="/"><img src="/logo1.svg" class="m:h-[45px] w-full h-[12px]"></router-link>
           <router-link v-for="item in navigation"  :to="item.pageLink" :class="[item.current ? ' text-yellow  items-center  flex' : 'text-white    hover:text-yellow  items-center  flex', 'rounded-md md:px-5 px-3 py-2 md:text-sm text-[12px] font-medium items-center  flex']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</router-link>
         </div>
         

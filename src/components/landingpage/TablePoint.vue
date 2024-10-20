@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#FBFAF8]">
     <div class="container mx-auto">
-      <section class=" px-2 md:px-10 py-20">
+    <section class="p-10">
         <h2 class="text-4xl font-bold mb-4 text-gold ">TABLE ∙ POINT</h2>
         <h2 class="text-xl  mb-4 text-gold">테이블/포인트조명</h2>
         

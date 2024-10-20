@@ -1,20 +1,32 @@
 <template>
-    <div class="container mx-auto">
-      <section class=" px-2 md:px-10 py-20">
+      <div class="container mx-auto">
+        <section class="p-10">
         <h2 class="text-4xl font-bold mb-4 text-gold ">Outdoor Light</h2>
         <h2 class="text-xl  mb-4 text-gold">야외조명</h2>
         
-        <div class="grid md:grid-cols-4 grid-cols-2  gap-6 mt-10 justify-center md:justify-start">
-          <div v-for="product in products" :key="product.id" class="text-center">
-            <img :src=" product.img" alt="Product Image" class=" h-[376px] w-[276px] object-cover rounded-tr-2xl mb-5">
-            <h3 class="text-lg text-left">{{ product.name }}</h3>
-            <p class=" text-left font-bold">{{ product.price }}</p>
-          
-            
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-6 mt-10  ">
+        <div v-for="product in products" :key="product.id" class="text-center relative justify-center md:justify-start items-center">
+          <div class="text-center relative justify-center md:justify-start items-center">
+          <img :src="product.img" alt="Product Image" class="h-[321px] w-[276px] object-cover mb-2 rounded-tr-2xl">
+          <div 
+            class="absolute bottom-2 right-16 md:right-2 cursor-pointer" 
+            @click="toggleFavorite(product)"
+          >
+            <img 
+              :src="product.isFavorite ? '/heartGray.png' : '/favorite.png'" 
+              alt="Favorite Icon" 
+              class="w-6 h-6"
+            />
           </div>
-        
-          
         </div>
+          <h3 class="text-sm text-left font-bold">{{ product.name }}</h3>
+          <p class="text-left font-bold text-lg">{{ product.price }}</p>
+          <div class="flex gap-2">
+            <div class="text-sm text-left font-bold bg-[#F4AB1B] text-white px-2 py-2 flex items-center  mt-2 rounded-[4px]">{{ product.a }}</div>
+            <div class="text-sm text-left font-bold bg-[#3C1BF4] text-white px-4 py-2 flex items-center  mt-2 rounded-[4px]"><img src="/car.png" class="mr-3"/>{{ product.b }}</div>
+          </div>
+        </div>
+      </div>
         <div class="flex justify-center w-full my-16">
           <button class="w-[240px] h-[48px] border-[#5C4715] border-2 text-[#5C4715] rounded-[50px] flex items-center justify-center "><img src="/icons/plus.png" class="mr-3"/><span>야외조명 더보기</span></button>
          </div>

@@ -42,7 +42,7 @@
           v-for="(group, index) in chunkedSlides"
           :key="index"
           @click="currentSlide = index"
-          :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-black' : 'bg-gray-400']"
+          :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-[#ABA79F]' : 'bg-gray-200']"
           :style="{ width: (1 / chunkedSlides.length) * 100 + '%' }">
         </div>
       </div>

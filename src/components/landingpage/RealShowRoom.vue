@@ -41,14 +41,14 @@
     </div>
 
     <!-- Horizontal Line Navigation (clickable) -->
-    <div class="absolute md:bottom-4 bottom-1 left-0 container slider-center px-8">
+    <div class="absolute md:bottom-4 bottom-1 left-0 container slider-center w-2/3">
       <div class="h-1 w-full bg-gray-300 flex relative">
         <!-- Create segments for each slide, each clickable -->
         <div
           v-for="(slide, index) in slides"
           :key="index"
           @click="currentSlide = index"
-          :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-golden' : 'bg-gray-400']"
+          :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-[#ABA79F]' : 'bg-gray-200']"
           :style="{ width: (1 / slides.length) * 100 + '%' }">
         </div>
       </div>

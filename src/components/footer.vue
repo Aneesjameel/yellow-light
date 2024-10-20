@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-100 p-8">
+  <footer class="bg-gray-100 p-8 md:h-[382px]">
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-gray-700">
     <!-- Customer Center -->
     <div class="space-y-2">
