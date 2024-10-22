@@ -9,20 +9,20 @@
     <h1 class="text-6xl font-semibold mb-6 text-capitalize text-[#ABA79F] -rotate-90 text-abc absolute">Real Show Room</h1>
 
     <!-- Slider Container -->
-    <div class="relative overflow-hidden md:p-10 p-2">
-      <h2 class="text-lg text-gold pl-3">약 231,242명이 사랑해 주신<br>
+    <div class="relative overflow-hidden md:p-10 p-2 z-10">
+      <h2 class="text-lg text-gold  md:pl-24 pl-3 font-bold">약 231,242명이 사랑해 주신<br>
         노랑조명 고객님들의 생생한 실제 후기</h2>
 
       <!-- Scrollable slider track -->
       <div 
-        class="flex transition-transform duration-500 ease-in-out p-5"
+        class="flex transition-transform duration-500 ease-in-out  py-5"
         :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
         
         <!-- Grouped Category Items (1 image per slide on mobile, multiple on larger screens) -->
         <div
           v-for="(group, groupIndex) in chunkedSlides"
           :key="groupIndex"
-          class="w-full flex-shrink-0 flex justify-center items-center space-x-1">
+          class="w-full flex-shrink-0 flex justify-center items-center ">
           
           <!-- Images within each group -->
           <div
@@ -40,19 +40,19 @@
       </div>
     </div>
 
-    <!-- Horizontal Line Navigation (clickable) -->
-    <div class="absolute md:bottom-4 bottom-1 left-0 container slider-center w-2/3">
-      <div class="h-1 w-full bg-gray-300 flex relative">
-        <!-- Create segments for each slide, each clickable -->
-        <div
-          v-for="(slide, index) in slides"
-          :key="index"
-          @click="currentSlide = index"
-          :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-[#ABA79F]' : 'bg-gray-200']"
-          :style="{ width: (1 / slides.length) * 100 + '%' }">
-        </div>
-      </div>
+   <!-- Horizontal Line Navigation (clickable) -->
+<div class="absolute md:bottom-4 bottom-1 left-0 container slider-center w-2/3">
+  <div class="h-1 w-full bg-gray-300 flex relative">
+    <!-- Create segments for each slide group, each clickable -->
+    <div
+      v-for="(group, index) in chunkedSlides"
+      :key="index"
+      @click="currentSlide = index"
+      :class="['h-1 transition-all duration-300 ease-in-out cursor-pointer', currentSlide === index ? 'bg-[#ABA79F]' : 'bg-gray-200']"
+      :style="{ width: (1 / chunkedSlides.length) * 100 + '%' }">
     </div>
+  </div>
+</div>
   </div>
 </template>
 
@@ -74,15 +74,15 @@ export default {
     };
   },
   computed: {
-    chunkedSlides() {
-      const chunkSize = window.innerWidth < 768 ? 1 : 3; // Show 1 image per slide on mobile
-      const chunks = [];
-      for (let i = 0; i < this.slides.length; i += chunkSize) {
-        chunks.push(this.slides.slice(i, i + chunkSize));
-      }
-      return chunks;
-    },
+  chunkedSlides() {
+    const chunkSize = window.innerWidth < 768 ? 1 : 3; // Show 1 image per slide on mobile, 3 on desktop
+    const chunks = [];
+    for (let i = 0; i < this.slides.length; i += chunkSize) {
+      chunks.push(this.slides.slice(i, i + chunkSize));
+    }
+    return chunks;
   },
+},
   mounted() {
     // Automatically cycle through slides every 5 seconds
     setInterval(() => {
@@ -92,6 +92,7 @@ export default {
     window.addEventListener('resize', () => {
       this.$forceUpdate(); // Update the chunked slides on window resize
     });
+    
   },
   methods: {
     handleTouchStart(event) {
@@ -122,12 +123,13 @@ export default {
 <style scoped>
 .text-abc {
   height: 200px;
-  width: 500px;
-  text-align: left;
-  position: absolute;
-  left: -159px;
-  top: 184px;
-  z-index: 1;
+    width: 500px;
+    text-align: left;
+    position: absolute;
+    left: -94px;
+    top: 168px;
+    z-index: 1;
+    font-size: 67px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -142,5 +144,17 @@ export default {
 .slider-center {
   transform: translateX(-50%);
   left: 50%;
+}
+@media screen and (max-width:767px) {
+  .text-abc {
+    height: 200px;
+    width: 500px;
+    text-align: left;
+    position: absolute;
+    left: -127px;
+    top: 188px;
+    z-index: 1;
+    font-size: 53px;
+}
 }
 </style>

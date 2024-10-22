@@ -5,11 +5,11 @@
       <h2 class="text-xl mb-4">이달의 인기상품을 확인해 보세요!</h2>
 
       <div class="grid md:grid-cols-4 grid-cols-1 gap-6 mt-10  ">
-        <div v-for="product in products" :key="product.id" class="text-center relative justify-center md:justify-start items-center">
-          <div class="text-center relative justify-center md:justify-start items-center">
+        <div v-for="product in products" :key="product.id" class="text-center relative justify-center md:justify-start items-center w-[276px]">
+          <div class="text-center relative justify-center md:justify-start items-center w-[276px]">
           <img :src="product.img" alt="Product Image" class="h-[321px] w-[276px] object-cover mb-2 rounded-tr-2xl">
           <div 
-            class="absolute bottom-2 right-16 md:right-2 cursor-pointer" 
+            class="absolute bottom-2 right-2  cursor-pointer" 
             @click="toggleFavorite(product)"
           >
             <img 

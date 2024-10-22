@@ -16,7 +16,7 @@
           
         </div>
         <div class="flex justify-center w-full my-16">
-          <button class="w-[240px] h-[48px] border-[#5C4715] border-2 text-[#5C4715] rounded-[50px] flex items-center justify-center "><img src="/icons/plus.png" class="mr-3"/><span>거실/침실조명 더보기</span></button>
+          <button class=" h-[48px] border-[#5C4715] border-2 text-[#5C4715] rounded-[50px] flex items-center justify-center px-5 "><img src="/icons/plus.png" class="mr-3"/><span>거실/침실조명 더보기</span></button>
          </div>
       </section>
     </div>

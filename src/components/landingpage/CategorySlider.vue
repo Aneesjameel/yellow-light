@@ -14,7 +14,7 @@
         <div
           v-for="(group, groupIndex) in chunkedSlides"
           :key="groupIndex"
-          class="w-full flex-shrink-0 flex justify-around items-center space-x-4">
+          class="w-full flex-shrink-0 flex justify-around items-center">
           
           <!-- Images within each group -->
           <div
@@ -24,7 +24,7 @@
             
             <!-- Circular Image -->
             <div class="bg-gray-200 rounded-[50%] p-4">
-              <img :src="slide.image" alt="Category Image" class="h-16 w-16">
+              <img :src="slide.image" alt="Category Image" class="h-[100px] w-[100px]">
             </div>
             
             <!-- Category Name -->
@@ -35,9 +35,9 @@
     </div>
 
     <!-- Horizontal Line Navigation (clickable) -->
-    <div class="absolute bottom-2 left-0 w-full flex justify-center">
+    <!-- <div class="absolute bottom-2 left-0 w-full flex justify-center">
       <!-- Create segments for each slide group, each clickable -->
-      <div class="h-1 w-3/4 bg-gray-300 flex relative">
+     <!-- <div class="h-1 w-3/4 bg-gray-300 flex relative">
         <div
           v-for="(group, index) in chunkedSlides"
           :key="index"
@@ -46,7 +46,7 @@
           :style="{ width: (1 / chunkedSlides.length) * 100 + '%' }">
         </div>
       </div>
-    </div>
+    </div>  -->
   </div>
 </template>
 
@@ -65,17 +65,7 @@ export default {
         { title: '현관/베란다조명', image: '/products/all/image 11.png' },
         { title: '스탠드조명', image: '/products/all/image 12.png' },
         { title: '추가조명1', image: '/products/all/image 13.png' },
-        { title: '홈조명', image: '/products/all/image 5.png' },
-        { title: '식탁/포인트조명', image: '/products/all/image 6.png' },
-        { title: '주방/욕실조명', image: '/products/all/image 8.png' },
-        { title: '레일등', image:'/products/all/image 7.png' },
-        { title: '매입등', image: '/products/all/image 9.png' },
-        { title: '벽조명', image: '/products/all/image 10.png' },
-        { title: '현관/베란다조명', image: '/products/all/image 11.png' },
-        { title: '스탠드조명', image: '/products/all/image 12.png' },
-        { title: '추가조명1', image: '/products/all/image 13.png' },
-        { title: '홈조명', image: '/products/all/image 5.png' },
-        { title: '식탁/포인트조명', image: '/products/all/image 6.png' },
+        { title: '홈조명', image: '/products/all/image 5.png' }
       ],
     };
   },
@@ -92,9 +82,9 @@ export default {
   },
   mounted() {
     // Automatically cycle through slides every 5 seconds
-    setInterval(() => {
+   
       this.currentSlide = (this.currentSlide + 1) % this.chunkedSlides.length;
-    }, 5000);
+ 
     
     window.addEventListener('resize', () => {
       this.$forceUpdate(); // Update the chunked slides on window resize
