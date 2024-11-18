@@ -220,6 +220,10 @@ h6{
 }
 .rounded-2xl{
   border-radius: 6px !important;
+  height:50px;
+}
+input[type="text"]{
+  height:48px;
 }
 /* price tour  */
 /* price tour 2 */

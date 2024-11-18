@@ -1,6 +1,12 @@
 <template>
     <div class="grid h-screen place-items-center"> <!-- Adjusted margin to account for navbar height -->
         <div class="w-full max-w-md">
+            <div class="bg-white  rounded-lg container">
+      <div class="flex justify-end pr-8">
+        <RouterLink to="/MainPage">
+          <button class="text-black text-2xl">✖</button>
+        </RouterLink>
+      </div></div>
             <div class="bg-white px-8 pt-6 pb-8 mb-4">
                 <div class="brand flex items-center justify-center mb-8">
                     <img src="/logo-large.png" alt="">
@@ -36,12 +42,12 @@
 
                     <div class="flex justify-between mt-10">
                         <div class="flex ">
-                            <a href="findid" class="text-gray-600 hover:text-gray-900">아이디찾기</a>
+                            <RouterLink to="findid" class="text-black hover:text-black pr-[2px]">아이디찾기</RouterLink>
                             <hr class=" mx-1 border border-gray-200 h-6"/>
-                            <a href="password" class="text-gray-600 hover:text-gray-900">비밀번호찾기</a>
+                            <RouterLink to="password" class="text-black hover:text-black">비밀번호찾기</RouterLink>
                         </div>
                         <div>
-                            <a href="memberinformation" class="text-gray-600 hover:text-gray-900">회원가입</a>
+                            <RouterLink to="memberinformation" class="text-black hover:text-black">회원가입</RouterLink>
                         </div>
                     </div>
                 </form>

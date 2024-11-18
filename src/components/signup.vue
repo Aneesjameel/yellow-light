@@ -1,5 +1,11 @@
 <template>
   <div class="max-w-lg mx-auto p-6 mt-20">
+    <div class="bg-white  rounded-lg container">
+      <div class="flex justify-end">
+        <RouterLink to="/MainPage">
+          <button class="text-black text-2xl">✖</button>
+        </RouterLink>
+      </div></div>
     <!-- Welcome Message -->
     <div class="text-center mb-6">
       <img src="/wellcome-let-join-us.svg" alt="" class="mx-auto mb-10">
@@ -67,7 +73,7 @@
           <input
             class="w-1/2 appearance-none border border-[#BABABA] rounded py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text" placeholder="이름 *" required="">
-          <button class="w-1/4 bg-white border border-[#9A9A9A] hover:bg-[#9A9A9A] hover:text-white p-2" type="button">
+          <button class="w-1/3 bg-white border border-[#9A9A9A] hover:bg-[#9A9A9A] hover:text-white p-2" type="button">
             인증번호 받기
           </button>
         </div>
@@ -83,7 +89,7 @@
         <label class="block text-sm font-medium">배송주소 *</label>
         <div class="flex space-x-2">
           <input type="text" class="w-1/2 border border-gray-300 rounded-lg p-2" v-model="form.address" />
-          <button class="w-1/4 bg-white border border-[#9A9A9A] hover:bg-[#9A9A9A] hover:text-white p-2" type="button">
+          <button class="w-1/3 bg-white border border-[#9A9A9A] hover:bg-[#9A9A9A] hover:text-white p-2" type="button">
             우편번호 검색
           </button>
         </div>

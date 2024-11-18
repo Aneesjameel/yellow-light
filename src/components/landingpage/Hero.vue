@@ -1,10 +1,10 @@
 <template>
-  <div
-    class="relative w-full md:h-screen overflow-hidden md:slider transparent-to"
-    @touchstart="handleTouchStart"
-    @touchmove="handleTouchMove"
-    @touchend="handleTouchEnd"
-  >
+<div
+  class="relative w-full md:h-screen h-[468px] overflow-hidden md:slider transparent-to"
+  @touchstart="handleTouchStart"
+  @touchmove="handleTouchMove"
+  @touchend="handleTouchEnd"
+>
     <!-- Slider track -->
     <div
       class="flex transition-transform duration-500 ease-in-out"
@@ -14,7 +14,7 @@
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        class="w-full flex-shrink-0 md:h-screen h-[180px] bg-cover bg-center xs:images2"
+        class="w-full flex-shrink-0 md:h-screen h-[468px] bg-cover bg-center xs:images2"
         :style="{ backgroundImage: `url(${slide.image})` }"
       >
         <!-- Overlay with text content (specific to each slide) -->
@@ -61,6 +61,13 @@ export default {
     };
   },
   mounted() {
+      // Check for mobile resolution and update images
+      if (window.innerWidth <= 768) {
+      this.slides = this.slides.map((slide, index) => ({
+        ...slide,
+        image: `/wallpaper/Mobile${index + 1}.png`, // Set mobile-specific image
+      }));
+    }
     // Automatically cycle through slides every 5 seconds
     setInterval(() => {
       this.currentSlide = (this.currentSlide + 1) % this.slides.length;

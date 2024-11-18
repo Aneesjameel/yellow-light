@@ -5,10 +5,10 @@
         <h2 class="text-4xl font-bold mb-4 text-gold ">Outdoor Light</h2>
         <h2 class="text-xl  mb-4 text-gold">야외조명</h2>
         
-        <div class="grid md:grid-cols-4 grid-cols-1 gap-6 mt-10  ">
-        <div v-for="product in products" :key="product.id" class="text-center relative justify-center md:justify-start items-center w-[276px]">
-          <div class="text-center relative justify-center md:justify-start items-center w-[276px]">
-          <img :src="product.img" alt="Product Image" class="h-[321px] w-[276px] object-cover mb-2 rounded-2xl">
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-6 mt-10  ">
+                <div v-for="product in products" :key="product.id" class="text-center relative justify-center md:justify-start items-center md:w-[276px] w-[164px]">
+          <div class="text-center relative justify-center md:justify-start items-center md:w-[276px] w-[164px]">
+          <img :src="product.img" alt="Product Image" class="h-[194x] w-[164px] md:h-[321px] md:w-[276px] object-cover mb-2 rounded-tr-2xl">
           <div 
             class="absolute bottom-2 right-2  cursor-pointer" 
             @click="toggleFavorite(product)"
@@ -23,8 +23,8 @@
           <h3 class="text-sm text-left font-bold">{{ product.name }}</h3>
           <p class="text-left font-bold text-lg">{{ product.price }}</p>
           <div class="flex gap-2">
-            <div class="text-sm text-left font-bold bg-[#F4AB1B] text-white px-2 py-2 flex items-center  mt-2 rounded-[4px]">{{ product.a }}</div>
-            <div class="text-sm text-left font-bold bg-[#3C1BF4] text-white px-4 py-2 flex items-center  mt-2 rounded-[4px]"><img src="/car.png" class="mr-3"/>{{ product.b }}</div>
+            <div class="md:text-sm text-[12px] text-left font-bold bg-[#F4AB1B] text-white px-1 md:px-2 py-2 flex items-center  mt-2 rounded-[4px]">{{ product.a }}</div>
+            <div class="md:text-sm text-left text-[12px] font-bold bg-[#3C1BF4] text-white px-2 md:px-4 py-2 flex items-center  mt-2 rounded-[4px]"><img src="/car.png" class="mr-3"/>{{ product.b }}</div>
           </div>
         </div>
       </div>
