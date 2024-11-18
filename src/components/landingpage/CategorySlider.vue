@@ -1,59 +1,51 @@
 <template>
-  <div class="w-full relative p-10">
+  <div class="w-full relative mx-auto container pt-[120px]">
     <!-- Slider Title -->
     <h2 class="text-center text-2xl font-semibold mb-6 text-gold">All Categories</h2>
 
-    <!-- Slider Container -->
-    <div
-      class="relative overflow-hidden md:pl-10 md:pr-10 pt-10"
-      @touchstart="handleTouchStart"
-      @touchmove="handleTouchMove"
-      @touchend="handleTouchEnd"
+    <!-- Swiper Slider -->
+    <swiper
+      :slides-per-view="slidesPerView"
+      :space-between="30"
+      :loop="false"
+      :pagination="{ clickable: true }"
+      :navigation="false"
+      class="mySwiper"
+      @slideChange="onSlideChange"
+      :breakpoints="breakpoints"
     >
-      <!-- Scrollable slider track -->
-      <div
-        class="flex transition-transform duration-500 ease-in-out justify-center items-center"
-        :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
-      >
-        <!-- Grouped Category Items -->
-        <div
-          v-for="(group, groupIndex) in chunkedSlides"
-          :key="groupIndex"
-          class="w-full flex-shrink-0 flex md:justify-around items-top md:flex-shrink-0"
-        >
-          <!-- Images within each group -->
+      <!-- Grouped Category Items -->
+      <swiper-slide v-for="(slide, index) in slides" :key="index">
+        <div class="flex flex-col ">
+          <!-- Circular Image -->
           <div
-            v-for="(slide, index) in group"
-            :key="index"
-            class="flex flex-col w-1/4"
+            class="bg-gray-200 flex rounded-[50%]  h-[64px] w-[64px] md:h-[100px] md:w-[100px] justify-center items-center mx-auto"
           >
-            <!-- Circular Image -->
-            <div
-              class="bg-gray-200 flex rounded-[50%] p-4 h-[64px] w-[64px] md:h-[100px] md:w-[100px] justify-center items-center mx-auto"
-            >
-              <img
-                :src="slide.image"
-                alt="Category Image"
-                class="h-[48px] w-[48px] md:h-[62px] md:w-[62px] justify-end items-end mx-auto"
-              />
-            </div>
-            <!-- Category Name -->
-            <p class="mt-2 text-sm text-center">{{ slide.title }}</p>
+            <img
+              :src="slide.image"
+              alt="Category Image"
+              class="h-[48px] w-[48px] md:h-[62px] md:w-[62px] justify-end items-end mx-auto"
+            />
           </div>
+          <!-- Category Name -->
+          <p class="mt-2 text-sm text-center">{{ slide.title }}</p>
         </div>
-      </div>
-    </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
-
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/swiper-bundle.css";
+
 export default {
+  components: {
+    Swiper,
+    SwiperSlide
+  },
   data() {
     return {
-      currentSlide: 0, // Current active slide index
-      startX: 0, // Touch start position
-      deltaX: 0, // Distance moved during swipe
       slides: [
         { title: "홈조명", image: "/products/all/image 5.png" },
         { title: "식탁/포인트조명", image: "/products/all/image 6.png" },
@@ -66,75 +58,46 @@ export default {
         { title: "추가조명1", image: "/products/all/image 13.png" },
         { title: "홈조명", image: "/products/all/image 5.png" },
       ],
+      slidesPerView: 4 // default slides per view for mobile/tablet
     };
   },
   computed: {
-    chunkedSlides() {
-      const chunkSize = window.innerWidth < 768 ? 4 : 10; // Show 4 items per slide on mobile, 10 on larger screens
-      const chunks = [];
-      for (let i = 0; i < this.slides.length; i += chunkSize) {
-        chunks.push(this.slides.slice(i, i + chunkSize));
-      }
-      return chunks;
-    },
-  },
-  mounted() {
-    this.updateSlidesOnResize(); // Initial setup
-    window.addEventListener("resize", this.updateSlidesOnResize);
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.updateSlidesOnResize);
+    breakpoints() {
+      return {
+        640: {
+          slidesPerView: 2, // 2 items per view on small screens (mobile)
+        },
+        1024: {
+          slidesPerView: this.slides.length, // Show all items on large screens (desktop)
+          loop: false, // Disable looping
+        },
+      };
+    }
   },
   methods: {
-    handleTouchStart(event) {
-      this.startX = event.touches[0].clientX;
-      this.deltaX = 0;
-    },
-    handleTouchMove(event) {
-      this.deltaX = event.touches[0].clientX - this.startX;
-    },
-    handleTouchEnd() {
-      const threshold = 50; // Minimum swipe distance to trigger a change
-      if (this.deltaX > threshold) {
-        this.prevSlide();
-      } else if (this.deltaX < -threshold) {
-        this.nextSlide();
-      }
-    },
-    nextSlide() {
-      this.currentSlide =
-        (this.currentSlide + 1) % this.chunkedSlides.length;
-    },
-    prevSlide() {
-      this.currentSlide =
-        (this.currentSlide - 1 + this.chunkedSlides.length) %
-        this.chunkedSlides.length;
-    },
-    updateSlidesOnResize() {
-      this.$forceUpdate(); // Force re-render to adjust for resolution changes
-      const maxSlides = this.chunkedSlides.length;
-      if (this.currentSlide >= maxSlides) {
-        this.currentSlide = maxSlides - 1;
-      }
-    },
-  },
+    onSlideChange(swiper) {
+      // Optionally handle the slide change
+      console.log("Slide changed to index:", swiper.activeIndex);
+    }
+  }
 };
 </script>
 
-
-
 <style scoped>
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+.swiper-slide {
+  margin-right:28px !important
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.swiper-pagination-bullet {
+  background-color: #333;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
 }
 
-.slider-center {
-  transform: translateX(-50%);
-  left: 50%;
+.swiper-pagination-bullet-active {
+  background-color: #007BFF;
+  opacity: 1;
 }
 </style>

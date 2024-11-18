@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#FFFBF2]">
       <div class="container mx-auto">
-        <section class="p-10">
+        <section class="md:p-10 p-5">
         <h2 class="text-4xl font-bold mb-4 text-gold ">Outdoor Light</h2>
         <h2 class="text-xl  mb-4 text-gold">야외조명</h2>
         
