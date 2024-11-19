@@ -21,7 +21,7 @@
         </button>
       </div>
       <!-- Logo Section -->
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex flex-1 items-center md:justify-center justify-start sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
           <router-link to="/"
             ><img src="/logo1.svg" class="md:h-[30px] w-full h-[23px]"
