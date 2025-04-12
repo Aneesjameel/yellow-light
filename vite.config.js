@@ -5,7 +5,7 @@ export default defineConfig({
   base: '/yellow-light/', 
   plugins: [vue()],
   server: {
-    host: '0.0.0.0', // Allows access from other devices on the network
-    port: 3000,      // You can specify the port number you want
+    host: '0.0.0.0', 
+    port: 3000,
   },
 });
